@@ -1,0 +1,34 @@
+doctype html
+
+html(lang='en')
+  head 
+    meta(charset='UTF-8')
+    meta(name="description", content="Portfolio for Kevin Brummer, a professional software engineer")
+    meta(name="keywords", content="software engineer developer portfolio resume ruby server docker japan")
+    meta(name="author", content="Kevin Brummer")
+    meta(property='og:title' content= "#{title} | Kevin Brummer")
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="https://kevinbrummer.com")
+    meta(property="og:image", content="/assets/images/site-og")
+    meta(property="og:site_name", content="Software Engineer Kevin Brummer")
+    meta(property="og:description", content="Portfolio for Kevin Brummer, a professional software engineer")
+    //-TODO meta(property="fb:app_id", content="任意のID")
+    title #{title} | Kevin Brummer 
+    link(rel='icon', href='assets/images/favicon.ico')
+    block scripts
+      // Google tag (gtag.js)
+      script(async, src='https://www.googletagmanager.com/gtag/js?id=G-HZ6W4L0M3N')
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HZ6W4L0M3N');
+      script(src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js")
+    block style
+      link(rel='stylesheet', type='text/css', href='/assets/styles/app.css')
+  body
+    block header 
+    block content 
+    block footer 
+      footer#footer 
+        p 2023 Kevin Brummer All Rights Reserved

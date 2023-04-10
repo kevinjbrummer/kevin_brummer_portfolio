@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import "fonts";
+@import "variables";
+@import "../styles/css/all.css";
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100vw;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: $background--main;
+  color: $text--main;
+  font-family: $hind-font;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  color: $text--main;
+  text-decoration: none;
+  &:visited {
+    color: $text--main;
+  }
+}
+
+
+.parallax-container {
+  position: relative;
+  height: 80vh;
+  height: 80svh;
+  overflow: auto;
+  background-color: darkblue;
+  background: no-repeat center/100% url("../images/night_sky.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  img.parallax-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.subtitle {
+  font-style: italic;
+}
+
+.wrapper {
+  width: 60%;
+  margin: auto;
+  .title-container {
+    margin: 0 auto 5rem auto;
+    h1.title{
+      font-size: clamp(35px, 5vw, 65px);
+      margin-bottom: 0;
+    }
+    span.subtitle {
+      font-size: clamp(12px, 5vw, 30px);
+    }
+  }
+  .section {
+    padding-bottom: 3em;
+    transition: box-shadow 500ms ease-in, background 500ms ease-in;
+    &.inverse{
+      color: $text--inverse;
+      background-color: $background--inverse;
+      a {
+        color: $text--inverse;
+        &:visited {
+          color: $text--inverse;
+        }
+      }
+    }
+    &.full-bleed {
+      box-shadow: 0 0 0 100vmax $background--inverse;
+      clip-path: inset(-1px -100vmax);
+    }
+    .section-title {
+      font-size: clamp(30px, 5vw, 50px);
+      padding-bottom: 1em;
+      padding-top: 1em;
+      span {
+        margin-right: 1em;
+      }
+    }
+    .entry {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 3em;
+      
+      dt.date {
+        width: 33%;
+        text-align: right;
+      }
+      .details {
+        width: 50%;
+      }
+      .technology {
+        margin: 0;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            display: flex;
+            list-style-type: none;
+            &:not(:first-child)::before {
+              content: "❖";
+              margin: 0 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

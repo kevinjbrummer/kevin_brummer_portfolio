@@ -1,0 +1,193 @@
+extends layout.pug 
+
+block content 
+  div.parallax-container
+    img(src="/assets/images/cherry_blossom_tree.png", alt="cherry blossoms", class="parallax-img")
+  main
+    .wrapper 
+      .title-container 
+        h1.title 
+          | Kevin Brummer
+        span.subtitle Software Engineer
+      section.section#about 
+        h2.section-title
+          span
+            i.fa-solid.fa-circle-info
+          | About
+        div
+          p
+            | Hi there! My name is Kevin Brummer, and I'm a software engineer based in Osaka, Japan.
+            br
+            | I studied computer science in college, and I took some time off to come to Japan and learn about the language and culture.
+            br
+            | I am extraordinarily enthusiastic, not only about software and technology but also about Japanese culture.
+            br
+            | So in 2022, I decided to combine my passions and become an engineer in Japan.
+          p
+            | I am incredibly passionate about my work and always looking for a new challenge to grow personally and professionally.
+            br
+          p 
+            | If you have any opportunities for me or want to say hello, don't hesitate to contact me!
+      section.section#work-history
+        h2.section-title
+          span
+            i.fa-solid.fa-laptop-file
+          | Work History
+        dl
+          .entry
+            dt.date April 2022 ~ Present
+            .details 
+              dd.title
+                a(href="https://ankh-systems.co.jp") ANKH Systems
+              dd.subtitle Software Engineer
+              dd.description 
+                | Doing mainly backend work with a tight-knit international team of talented designers and developers.
+                | Designing and implementing databases, APIs, and servers.
+                | Actively communicating with clients to meet all their needs.
+                | Attending conferences and taking certifications to improve my skills.
+                | Looking for my next challenge.
+              dd.technology 
+                ul 
+                  li Ruby 
+                  li Rails 
+                  li PHP 
+                  li Docker 
+                  li Linux
+                  li MySQL
+                  li PostgreSQL
+                  li AWS
+                  li Next.js
+          .entry
+            dt.date November 2018 ~ April 2022
+            .details 
+              dd.title 
+                a(href="https://www.aeonet.co.jp/") Eikaiwa AEON
+              dd.subtitle English Instructor
+              dd.description 
+                | Leaned about Japan and it's culture through conversations with students.
+                | Discussed and planned ways for students to improve.
+                | Created plans and materials to control hour long classes.
+                | Worked with a small team of Japanese and English speakers.
+              dd.technology 
+                ul 
+                  li Microsoft Office
+      section.section#side-projects
+        h2.section-title
+          span
+            i.fa-solid.fa-seedling
+          | Side Projects
+        dl
+          .entry
+            dt.date March 2023 ~ April 2023
+            .details 
+              dd.title Portfolio (This Website!)
+              dd.description 
+                | From the design to the implementation, this project was done completely on my own.
+                | It was a good chance to take skills from my first year on the job and use them to create my own website.
+                | I'm looking forward to more challenging projects in my future!
+              dd.technology 
+                ul 
+                  li Node.js 
+                  li Express
+                  li Linux
+                  li Docker 
+                  li HTML/CSS
+                  li Sass
+                  li Javascript
+                  li NGINX
+                  li Design
+          .entry
+            dt.date December 2023 ~ April 2023
+            .details 
+              dd.title
+                a(href="https://eikaiwacoach.com") MAMA 1ST ENGLISH
+              dd.description 
+                | Created a Wordpress theme and plugin for a friend of mine. 
+                | The design was done by an outside team, but everything else was done by me.
+                | This project helped me learn so much about CSS implementation and Wordpress.
+                | It was my first large-scale project on my own and I had such a blast doing it.
+              dd.technology 
+                ul 
+                  li PHP
+                  li MySQL
+                  li Wordpress
+                  li Docker
+                  li HTML/CSS
+                  li Sass
+                  li JQuery
+      section.section#education
+        h2.section-title
+          span
+            i.fa-solid.fa-graduation-cap
+          | Education
+        dl
+          .entry
+            dt.date September 2015 ~ May 2018
+            .details
+              dd.title University of Minnesota
+              dd.subtitle Bachelor of Individualized Studies 
+              dd.description
+                | Specialization in Computer Science, Communication Studies, and Japanese
+              dd.technology 
+                ul 
+                  li Algorithms & Data Structures
+                  li Artificial Intelligence 
+                  li Software Engineering 
+                  li Boolean Algebra
+      section.section#certification
+        h2.section-title
+          span
+            i.fa-solid.fa-certificate
+          | Certification
+        dl
+          .entry
+            dt.date February 2023
+            .details
+              dd.title 
+                a(href="https://www.ruby.or.jp/en/certification/examination/") 
+                  | Ruby Association Certified Ruby Programmer Gold version 3
+          .entry
+            dt.date August 2022
+            .details
+              dd.title
+                a(href="https://aws.amazon.com/certification/certified-cloud-practitioner/?nc1=h_ls") 
+                  | AWS Certified Cloud Practicioner
+          .entry
+            dt.date May 2022
+            .details
+              dd.title 
+                a(href="https://www.ruby.or.jp/en/certification/examination/") 
+                  | Ruby Association Certified Ruby Programmer Silver version 2.1
+          .entry
+            dt.date December 2020
+            .details
+              dd.title
+                a(href="https://www.jlpt.jp/e/index.html") 
+                  | JLPT N2
+      section.section#contact
+        h2.section-title
+          span 
+            i.fa-regular.fa-address-book
+          | Contact
+        .links
+          h3.links__title 
+          address.links__content
+            a(href="mailto:kevinjbrummer@gmail.com") kjbrummernsf@gmail.com
+            br
+        .contact-form 
+          form#contact-form(action="/#contact-form", method="POST", multipart="urlencoded")
+            label(for="name") Name
+            input.contact-form__text#name(type="text", name="name", value=name, placeholder="Sterling Archer")
+
+            label(for="email") Email
+            input.contact-form__text(type="email", name="email", value=email, placeholder="danger@zone.com")
+
+            label(for="message") Message
+            textarea.contact-form__textarea(name="message", cols="30", rows="10", value=message, placeholder="") #{message}
+
+            input.contact-form__button(type="submit", value="Send")
+          
+
+  script(src='assets/js/main.js', type="module")
+    
+
