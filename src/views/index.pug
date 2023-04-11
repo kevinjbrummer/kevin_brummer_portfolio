@@ -1,5 +1,8 @@
 extends layout.pug 
 
+append scripts 
+  script(src=`https://www.google.com/recaptcha/api.js?render=${recaptcha_site_key}`) 
+
 block content 
   div.parallax-container
     img(src="/assets/images/cherry_blossom_tree.png", alt="cherry blossoms", class="parallax-img")

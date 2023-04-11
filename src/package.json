@@ -6,11 +6,12 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon .",
-    "start": "node . & npm run scss",
+    "start": "npm run dev & npm run scss",
     "scss": "sass --watch scss/app.scss public/styles/app.css"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
     "express": "^4.16.1",
     "express-validator": "^6.15.0",

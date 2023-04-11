@@ -121,4 +121,8 @@ a:visited {
   margin: 0 0.5em;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 /*# sourceMappingURL=app.css.map */

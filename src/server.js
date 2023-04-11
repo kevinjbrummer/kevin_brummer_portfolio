@@ -1,5 +1,9 @@
 'use strict';
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 const express = require('express');
 const path = require('path');
 var bodyParser = require('body-parser');
@@ -14,7 +18,7 @@ const app = express();
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Home', recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY });
 });
 
 
