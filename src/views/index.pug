@@ -188,9 +188,15 @@ block content
             label(for="message") Message
             textarea.contact-form__textarea(name="message", cols="30", rows="10", value=message, placeholder="") #{message}
 
-            input.contact-form__button(type="submit", value="Send")
+            input.contact-form__button#submitBtn(name="submitBtn", type="button", value="Send")
           
 
   script(src='assets/js/main.js', type="module")
+  
+  //- recaptcha submit code 
+  script.
+    var recaptchaSiteKey = "#{recaptcha_site_key}"
+  script(src="assets/js/recaptcha.js")
+    
     
 
