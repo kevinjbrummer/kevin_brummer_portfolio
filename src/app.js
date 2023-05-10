@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const { contactValidationChain, validateContactForm } = require('./middleware/validation')
+const { validateRecaptcha } = require('./middleware/recaptcha');
 
 app.set('view engine', 'pug');
 
@@ -17,10 +18,14 @@ app.post(
   '/',
   contactValidationChain(),
   validateContactForm,
+  validateRecaptcha,
   (req, res) => {
-    res.status(200).end();
-
-});
+   res.status(200).render('index', {
+      title: 'Home',
+      recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
+    });
+  }
+);
 
 app.use('/assets', express.static(path.join(__dirname, '/public')));
 

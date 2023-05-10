@@ -186,19 +186,24 @@ block content
         .contact-form 
           form#contact-form(action="/#contact-form", method="POST", multipart="urlencoded")
             label(for="name") Name
-            input.contact-form__text#name(type="text", name="name", value=name, placeholder="Sterling Archer")(class=errors && errors.name && 'has-error')
+            input.contact-form__text#name(type="text", name="name", value=name, placeholder="Sterling Archer" class=errors && errors.name && 'has-error')
             if errors && errors.name 
               p.error-message #{ errors.name }
 
             label(for="email") Email
-            input.contact-form__text(type="email", name="email", value=email, placeholder="danger@zone.com")(class=errors && errors.email && 'has-error')
+            input.contact-form__text(type="email", name="email", value=email, placeholder="danger@zone.com" class=errors && errors.email && 'has-error')
             if errors && errors.email 
               p.error-message #{ errors.email }
 
             label(for="message") Message
-            textarea.contact-form__textarea(name="message", cols="30", rows="10", value=message)(class=errors && errors.message && 'has-error') #{message}
+            textarea.contact-form__textarea(name="message", cols="30", rows="10", value=message class=errors && errors.message && 'has-error') #{message}
             if errors && errors.message 
               p.error-message #{ errors.message }
+
+            if errors && errors.system_error 
+              div 
+                p.error-message 
+                | System Error
 
             input.contact-form__button#submitBtn(name="submitBtn", type="button", value="Send")
           

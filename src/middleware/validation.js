@@ -2,25 +2,38 @@ const { check ,validationResult } = require('express-validator');
 
 const contactValidationChain = () => [
   check("name")
-  .not()
-  .isEmpty()
-  .withMessage('Please enter a name')
-  .isLength({ max: 255 })
-  .withMessage('Name must be 255 characters or fewer'),
+    .trim()
+    .escape()
+    .not()
+    .isEmpty()
+    .withMessage('Please enter a name')
+    .isLength({ max: 255 })
+    .withMessage('Name must be 255 characters or fewer'),
   check("email")
-  .not()
-  .isEmpty()
-  .withMessage('Please enter an email')
-  .isLength({ max: 255 })
-  .withMessage('Email must be 255 characters or fewer')
-  .isEmail()
-  .withMessage('Email format is incorrect'),
+    .trim()
+    .escape()
+    .not()
+    .isEmpty()
+    .withMessage('Please enter an email')
+    .isLength({ max: 255 })
+    .withMessage('Email must be 255 characters or fewer')
+    .isEmail()
+    .withMessage('Email format is incorrect'),
   check("message")
-  .not()
-  .isEmpty()
-  .withMessage('Please enter a message')
-  .isLength({ max: 1000 })
-  .withMessage('Message must be 1000 characters or fewer'),
+    .trim()
+    .escape()
+    .not()
+    .isEmpty()
+    .withMessage('Please enter a message')
+    .isLength({ max: 1000 })
+    .withMessage('Message must be 1000 characters or fewer'),
+  check('grecaptcha')
+    .trim()
+    .escape()
+    .if((val, { req }) => process.env.NODE_ENV !== 'test' )
+    .not()
+    .isEmpty()
+
 ];
 
 const myValidationResult = validationResult.withDefaults({
