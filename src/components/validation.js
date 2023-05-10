@@ -11,14 +11,14 @@ const contactValidationChain = () => [
   .not()
   .isEmpty()
   .withMessage('Please enter an email')
-  .isEmail()
-  .withMessage('Email format is incorrect')
   .isLength({ max: 255 })
-  .withMessage('Email must be 30 characters or fewer'),
+  .withMessage('Email must be 255 characters or fewer')
+  .isEmail()
+  .withMessage('Email format is incorrect'),
   check("message")
   .not()
   .isEmpty()
-  .withMessage('Please enter a messge')
+  .withMessage('Please enter a message')
   .isLength({ max: 1000 })
   .withMessage('Message must be 1000 characters or fewer'),
 ];
@@ -35,4 +35,4 @@ function validateContactForm(req, res, next) {
   next();
 }
 
-module.exports = {contactValidationChain, validateContactForm}
+module.exports = { contactValidationChain, validateContactForm }
