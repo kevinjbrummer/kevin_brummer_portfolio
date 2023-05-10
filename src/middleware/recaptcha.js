@@ -25,4 +25,4 @@ async function validateRecaptcha(req, res, next) {
   next();
 }
 
-module.exports = { validateRecaptcha };
+module.exports = validateRecaptcha;

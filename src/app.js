@@ -3,7 +3,8 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const { contactValidationChain, validateContactForm } = require('./middleware/validation')
-const { validateRecaptcha } = require('./middleware/recaptcha');
+const validateRecaptcha = require('./middleware/recaptcha');
+const sendMail = require('./middleware/mail');
 
 app.set('view engine', 'pug');
 
@@ -19,6 +20,7 @@ app.post(
   contactValidationChain(),
   validateContactForm,
   validateRecaptcha,
+  sendMail,
   (req, res) => {
    res.status(200).render('index', {
       title: 'Home',
