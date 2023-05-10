@@ -121,6 +121,10 @@ a:visited {
   margin: 0 0.5em;
 }
 
+.has-error {
+  border: 1px solid red;
+}
+
 .grecaptcha-badge {
   visibility: hidden;
 }

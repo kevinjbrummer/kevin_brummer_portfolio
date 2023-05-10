@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-const { contactValidationChain, validateContactForm } = require('./components/validation')
+const { contactValidationChain, validateContactForm } = require('./middleware/validation')
 
 app.set('view engine', 'pug');
 
@@ -17,7 +17,7 @@ app.post(
   '/',
   contactValidationChain(),
   validateContactForm,
-  (req, res, next) => {
+  (req, res) => {
     res.status(200).end();
 
 });

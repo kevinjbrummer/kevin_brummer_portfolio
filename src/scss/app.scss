@@ -125,6 +125,10 @@ a {
   }
 }
 
+.has-error {
+  border: 1px solid red;
+}
+
 .grecaptcha-badge {
   visibility: hidden;
 }
