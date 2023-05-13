@@ -15,11 +15,13 @@ body {
   background-color: black;
   color: white;
   font-family: "Hind", sans-serif;
+  font-size: 16px;
 }
 
 h1,
 h2,
-h3 {
+h3,
+dd {
   margin: 0;
 }
 
@@ -29,6 +31,15 @@ a {
 }
 a:visited {
   color: white;
+}
+a::before {
+  content: "";
+}
+a::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f35d";
+  margin: 0 4px;
+  font-weight: 600;
 }
 
 .parallax-container {
@@ -48,23 +59,21 @@ a:visited {
   width: 100%;
 }
 
-.subtitle {
-  font-style: italic;
-}
-
 .wrapper {
-  width: 60%;
+  width: 88%;
   margin: auto;
 }
 .wrapper .title-container {
   margin: 0 auto 5rem auto;
 }
 .wrapper .title-container h1.title {
-  font-size: clamp(35px, 5vw, 65px);
+  font-size: clamp(2.125rem, 2vw, 5rem);
   margin-bottom: 0;
+  line-height: 1.1;
 }
 .wrapper .title-container span.subtitle {
-  font-size: clamp(12px, 5vw, 30px);
+  font-size: clamp(1.5rem, 2vw, 4rem);
+  font-style: italic;
 }
 .wrapper .section {
   padding-bottom: 3em;
@@ -84,49 +93,124 @@ a:visited {
   box-shadow: 0 0 0 100vmax white;
   clip-path: inset(-1px -100vmax);
 }
-.wrapper .section .section-title {
-  font-size: clamp(30px, 5vw, 50px);
+.wrapper .section__title {
+  font-size: clamp(1.75rem, 2vw, 5.5rem);
   padding-bottom: 1em;
   padding-top: 1em;
+  text-transform: uppercase;
 }
-.wrapper .section .section-title span {
+.wrapper .section__title span {
   margin-right: 1em;
 }
+.wrapper .section__content {
+  font-size: clamp(0.925rem, 2vw, 2.125rem);
+}
 .wrapper .section .entry {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding-bottom: 3em;
+  font-size: clamp(0.925rem, 2vw, 2.125rem);
 }
 .wrapper .section .entry dt.date {
-  width: 33%;
-  text-align: right;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 2em;
+  font-size: clamp(1.1rem, 2vw, 2.5rem);
 }
-.wrapper .section .entry .details {
-  width: 50%;
+.wrapper .section .entry .details__title {
+  font-weight: 900;
+  margin-bottom: 0.125em;
 }
-.wrapper .section .entry .technology {
+.wrapper .section .entry .details__title.certification {
+  text-align: center;
+}
+.wrapper .section .entry .details__subtitle {
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+.wrapper .section .entry .details__description {
+  margin-bottom: 0.5em;
+}
+.wrapper .section .entry .details__technology {
   margin: 0;
 }
-.wrapper .section .entry .technology ul {
+.wrapper .section .entry .details__technology ul {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
 }
-.wrapper .section .entry .technology ul li {
+.wrapper .section .entry .details__technology ul li {
   display: flex;
   list-style-type: none;
 }
-.wrapper .section .entry .technology ul li:not(:first-child)::before {
+.wrapper .section .entry .details__technology ul li:not(:first-child)::before {
   content: "❖";
   margin: 0 0.5em;
 }
 
-.has-error {
-  border: 1px solid red;
-}
-
 .grecaptcha-badge {
   visibility: hidden;
+}
+
+.contact-form__container {
+  margin-bottom: 2em;
+}
+.contact-form__label {
+  font-size: clamp(0.925rem, 2vw, 2rem);
+  font-weight: 800;
+}
+.contact-form__label.required::after {
+  font-family: "Font Awesome 5 Free";
+  content: "*";
+  font-weight: 400;
+  margin-left: 4px;
+  color: #ff3333;
+}
+.contact-form__textarea, .contact-form__text {
+  width: 100%;
+  border: 1.5px solid;
+  border-radius: 10px;
+}
+.contact-form__textarea.has-error, .contact-form__text.has-error {
+  border-color: #ff3333;
+}
+.contact-form__textarea {
+  resize: none;
+}
+.contact-form__error {
+  color: #ff3333;
+  font-size: 0.75rem;
+}
+.contact-form__button-container {
+  text-align: center;
+}
+.contact-form__button {
+  padding: 0.5em 1.5em;
+  margin: 2em auto 0;
+  font-size: clamp(1.1rem, 2vw, 2rem);
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 100px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  cursor: pointer;
+}
+.contact-form__button:is(:hover, :focus) {
+  background-color: white;
+  color: black;
+}
+
+.contact-links__content {
+  font-weight: 600;
+  font-size: clamp(0.925rem, 2vw, 2rem);
+}
+
+.footer__container {
+  text-align: center;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=app.css.map */

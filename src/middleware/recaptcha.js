@@ -17,7 +17,7 @@ async function validateRecaptcha(req, res, next) {
   if (process.env.NODE_ENV !== 'test') {
     const recaptchaResponse = await tokenVerify(req.body['grecaptcha']);
     if (recaptchaResponse.score < process.env.RECPTCHA_MIN_SCORE) {
-      return res.status(400).render('index', {
+      return res.render('index', {
         errors: { system_error: 'Recaptcha Token Error' }
       });
     }

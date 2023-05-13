@@ -6,6 +6,7 @@ html(lang='en')
     meta(name="description", content="Portfolio for Kevin Brummer, a professional software engineer")
     meta(name="keywords", content="software engineer developer portfolio resume ruby server docker japan")
     meta(name="author", content="Kevin Brummer")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(property='og:title' content= "#{title} | Kevin Brummer")
     meta(property="og:type", content="website")
     meta(property="og:url", content="https://kevinbrummer.com")
@@ -30,11 +31,12 @@ html(lang='en')
     block header 
     block content 
     block footer 
-      footer#footer 
-        p 2023 Kevin Brummer All Rights Reserved
-        p 
-          | This site is protected by reCAPTCHA and the Google 
-          a(href="https://policies.google.com/privacy") Privacy Policy 
-          | and 
-          a(href="https://policies.google.com/terms") Terms of Service 
-          | apply.
+      footer#footer
+        .footer__container
+          p 2023 Kevin Brummer All Rights Reserved
+          p 
+            | This site is protected by reCAPTCHA and the Google 
+            a(href="https://policies.google.com/privacy") Privacy Policy 
+            | and 
+            a(href="https://policies.google.com/terms") Terms of Service 
+            | apply.

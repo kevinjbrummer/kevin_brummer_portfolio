@@ -17,11 +17,13 @@ body {
   background-color: $background--main;
   color: $text--main;
   font-family: $hind-font;
+  font-size: 16px;
 }
 
 h1,
 h2,
-h3 {
+h3,
+dd {
   margin: 0;
 }
 
@@ -31,8 +33,16 @@ a {
   &:visited {
     color: $text--main;
   }
+  &::before {
+    content: "";
+  }
+  &::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f35d";
+    margin: 0 4px;
+    font-weight: 600;
+  }
 }
-
 
 .parallax-container {
   position: relative;
@@ -51,21 +61,19 @@ a {
   }
 }
 
-.subtitle {
-  font-style: italic;
-}
-
 .wrapper {
-  width: 60%;
+  width: 88%;
   margin: auto;
   .title-container {
     margin: 0 auto 5rem auto;
     h1.title{
-      font-size: clamp(35px, 5vw, 65px);
+      font-size: clamp(2.125rem, 2vw, 5rem);
       margin-bottom: 0;
+      line-height: 1.1;
     }
     span.subtitle {
-      font-size: clamp(12px, 5vw, 30px);
+      font-size: clamp(1.5rem, 2vw, 4rem);
+      font-style: italic;
     }
   }
   .section {
@@ -85,38 +93,56 @@ a {
       box-shadow: 0 0 0 100vmax $background--inverse;
       clip-path: inset(-1px -100vmax);
     }
-    .section-title {
-      font-size: clamp(30px, 5vw, 50px);
+    &__title {
+      font-size: clamp(1.75rem, 2vw, 5.5rem);
       padding-bottom: 1em;
       padding-top: 1em;
+      text-transform: uppercase;
       span {
         margin-right: 1em;
       }
     }
+    &__content {
+      font-size: clamp(.925rem, 2vw, 2.125rem);
+    }
     .entry {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
       padding-bottom: 3em;
+      font-size: clamp(.925rem, 2vw, 2.125rem);
       
       dt.date {
-        width: 33%;
-        text-align: right;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 2em;
+        font-size: clamp(1.1rem, 2vw, 2.5rem);
       }
       .details {
-        width: 50%;
-      }
-      .technology {
-        margin: 0;
-        ul {
-          display: flex;
-          flex-wrap: wrap;
-          li {
+        &__title {
+          font-weight: 900;
+          margin-bottom: .125em;
+          &.certification {
+            text-align: center;
+          }
+        }
+        &__subtitle {
+          font-style: italic;
+          margin-bottom: .5em;
+        }
+        &__description {
+          margin-bottom: .5em;
+        }
+        &__technology {
+          margin: 0;
+          ul {
             display: flex;
-            list-style-type: none;
-            &:not(:first-child)::before {
-              content: "❖";
-              margin: 0 0.5em;
+            flex-wrap: wrap;
+            padding: 0;
+            li {
+              display: flex;
+              list-style-type: none;
+              &:not(:first-child)::before {
+                content: "❖";
+                margin: 0 0.5em;
+              }
             }
           }
         }
@@ -125,10 +151,11 @@ a {
   }
 }
 
-.has-error {
-  border: 1px solid red;
-}
-
 .grecaptcha-badge {
   visibility: hidden;
 }
+
+
+@import "./contact";
+@import "./footer";
+

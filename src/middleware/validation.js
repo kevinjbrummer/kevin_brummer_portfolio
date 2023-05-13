@@ -43,7 +43,7 @@ const myValidationResult = validationResult.withDefaults({
 function validateContactForm(req, res, next) {
   const result = myValidationResult(req);
   if (!result.isEmpty()) {
-    return res.status(400).render('index', {
+    return res.render('index', {
       title: 'Home',
       recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
       name: req.body.name,
