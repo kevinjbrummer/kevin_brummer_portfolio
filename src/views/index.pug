@@ -191,6 +191,10 @@ block content
               a(href="https://www.linkedin.com/in/kevinbrummer/") https://www.linkedin.com/in/kevinbrummer/
             br
         .contact-form 
+          if success
+            .success 
+              p 
+                | Your message was successfully sent!
           form#contact-form(action="/#contact-form", method="POST", multipart="urlencoded")
             .contact-form__container
               label.contact-form__label.required(for="name") Name

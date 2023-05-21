@@ -172,8 +172,12 @@ a::after {
 .contact-form__textarea.has-error, .contact-form__text.has-error {
   border-color: #ff3333;
 }
+.contact-form__text {
+  padding: 0.75em 5px;
+}
 .contact-form__textarea {
   resize: none;
+  padding: 0 5px;
 }
 .contact-form__error {
   color: #ff3333;
@@ -201,6 +205,17 @@ a::after {
 .contact-links__content {
   font-weight: 600;
   font-size: clamp(0.925rem, 2vw, 2rem);
+}
+
+.success {
+  background-color: rgba(145, 197, 145, 0.35);
+  color: hsl(120, 40%, 40%);
+  padding: 0.25em;
+  text-align: center;
+  margin-bottom: 1em;
+  box-shadow: 0 0 0 100vmax rgba(145, 197, 145, 0.35);
+  clip-path: inset(-1px -100vmax);
+  font-weight: 700;
 }
 
 .footer__container {

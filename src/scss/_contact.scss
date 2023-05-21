@@ -23,8 +23,13 @@
     }
   }
 
+  &__text {
+    padding: .75em 5px;
+  }
+
   &__textarea {
     resize: none;
+    padding: 0 5px;
   }
   &__error {
     color: $error;
@@ -55,4 +60,15 @@
     font-weight: 600;
     font-size: clamp(.925rem, 2vw, 2rem);
   }
+}
+
+.success {
+  background-color: $success;
+  color: $success-font;
+  padding: .25em;
+  text-align: center;
+  margin-bottom: 1em;
+  box-shadow: 0 0 0 100vmax $success;
+  clip-path: inset(-1px -100vmax);
+  font-weight: 700;
 }

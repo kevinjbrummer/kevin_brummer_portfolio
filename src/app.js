@@ -24,6 +24,7 @@ app.post(
   (req, res) => {
    res.status(200).render('index', {
       title: 'Home',
+      success: true,
       recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
     });
   }
