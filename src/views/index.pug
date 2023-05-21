@@ -192,9 +192,15 @@ block content
             br
         .contact-form 
           if success
-            .success 
+            .message.success 
               p 
                 | Your message was successfully sent!
+          if system_error 
+            .message.error 
+              p 
+                | Your message was unable to be sent.
+                br
+                | Please wait and try again.
           form#contact-form(action="/#contact-form", method="POST", multipart="urlencoded")
             .contact-form__container
               label.contact-form__label.required(for="name") Name

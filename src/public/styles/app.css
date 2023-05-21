@@ -162,7 +162,7 @@ a::after {
   content: "*";
   font-weight: 400;
   margin-left: 4px;
-  color: #ff3333;
+  color: rgb(255, 51, 51);
 }
 .contact-form__textarea, .contact-form__text {
   width: 100%;
@@ -170,7 +170,7 @@ a::after {
   border-radius: 10px;
 }
 .contact-form__textarea.has-error, .contact-form__text.has-error {
-  border-color: #ff3333;
+  border-color: rgb(255, 51, 51);
 }
 .contact-form__text {
   padding: 0.75em 5px;
@@ -180,7 +180,7 @@ a::after {
   padding: 0 5px;
 }
 .contact-form__error {
-  color: #ff3333;
+  color: rgb(255, 51, 51);
   font-size: 0.75rem;
 }
 .contact-form__button-container {
@@ -207,15 +207,22 @@ a::after {
   font-size: clamp(0.925rem, 2vw, 2rem);
 }
 
-.success {
-  background-color: rgba(145, 197, 145, 0.35);
-  color: hsl(120, 40%, 40%);
+.message {
   padding: 0.25em;
   text-align: center;
   margin-bottom: 1em;
-  box-shadow: 0 0 0 100vmax rgba(145, 197, 145, 0.35);
-  clip-path: inset(-1px -100vmax);
   font-weight: 700;
+  clip-path: inset(-1px -100vmax);
+}
+.message.success {
+  background-color: rgba(145, 197, 145, 0.35);
+  color: hsl(120, 40%, 40%);
+  box-shadow: 0 0 0 100vmax rgba(145, 197, 145, 0.35);
+}
+.message.error {
+  background-color: rgba(252, 155, 155, 0.35);
+  color: rgb(255, 51, 51);
+  box-shadow: 0 0 0 100vmax rgba(252, 155, 155, 0.35);
 }
 
 .footer__container {

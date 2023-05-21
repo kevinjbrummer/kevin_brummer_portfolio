@@ -62,13 +62,20 @@
   }
 }
 
-.success {
-  background-color: $success;
-  color: $success-font;
+.message {
   padding: .25em;
   text-align: center;
   margin-bottom: 1em;
-  box-shadow: 0 0 0 100vmax $success;
-  clip-path: inset(-1px -100vmax);
   font-weight: 700;
+  clip-path: inset(-1px -100vmax);
+  &.success {
+    background-color: $success;
+    color: $success-font;
+    box-shadow: 0 0 0 100vmax $success;
+  }
+  &.error {
+    background-color: $error--background;
+    color: $error;
+    box-shadow: 0 0 0 100vmax $error--background;
+  }
 }
