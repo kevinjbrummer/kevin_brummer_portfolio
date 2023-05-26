@@ -28,12 +28,11 @@ dd {
 a {
   color: white;
   text-decoration: none;
+  position: relative;
+  transition: border 4s ease-in;
 }
 a:visited {
   color: white;
-}
-a::before {
-  content: "";
 }
 a::after {
   font-family: "Font Awesome 5 Free";
@@ -41,7 +40,18 @@ a::after {
   margin: 0 4px;
   font-weight: 600;
 }
+a:is(:hover, :focus) {
+  animation: link_underline 250ms linear forwards;
+}
 
+@keyframes link_underline {
+  0% {
+    background: linear-gradient(#8813f6, #8813f6) left 0 bottom 0/0% 5px no-repeat;
+  }
+  100% {
+    background: linear-gradient(#8813f6, #8813f6) left 0 bottom 0/100% 5px no-repeat;
+  }
+}
 .parallax-container {
   position: relative;
   height: 80vh;

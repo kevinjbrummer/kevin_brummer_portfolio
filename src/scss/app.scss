@@ -30,17 +30,29 @@ dd {
 a {
   color: $text--main;
   text-decoration: none;
+  position: relative;
+  transition: border 4s ease-in;
   &:visited {
     color: $text--main;
-  }
-  &::before {
-    content: "";
   }
   &::after {
     font-family: "Font Awesome 5 Free";
     content: "\f35d";
     margin: 0 4px;
     font-weight: 600;
+  }
+  &:is(:hover, :focus) {
+    animation: link_underline 250ms linear forwards;
+  }
+}
+
+@keyframes link_underline {
+  0% {
+    background: linear-gradient($highlight, $highlight) left 0 bottom 0 / 0% 5px no-repeat;
+  }
+  100% {
+    background: linear-gradient($highlight, $highlight) left 0 bottom 0 / 100% 5px no-repeat;
+
   }
 }
 
