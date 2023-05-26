@@ -62,17 +62,18 @@ a::after {
 .wrapper {
   width: 88%;
   margin: auto;
+  max-width: 1200px;
 }
 .wrapper .title-container {
   margin: 0 auto 5rem auto;
 }
 .wrapper .title-container h1.title {
-  font-size: clamp(2.125rem, 2vw, 5rem);
+  font-size: clamp(2.125rem, 4vw, 5rem);
   margin-bottom: 0;
   line-height: 1.1;
 }
 .wrapper .title-container span.subtitle {
-  font-size: clamp(1.5rem, 2vw, 4rem);
+  font-size: clamp(1.5rem, 4vw, 4rem);
   font-style: italic;
 }
 .wrapper .section {
@@ -94,7 +95,7 @@ a::after {
   clip-path: inset(-1px -100vmax);
 }
 .wrapper .section__title {
-  font-size: clamp(1.75rem, 2vw, 5.5rem);
+  font-size: clamp(1.75rem, 4vw, 5.5rem);
   padding-bottom: 1em;
   padding-top: 1em;
   text-transform: uppercase;
@@ -104,16 +105,19 @@ a::after {
 }
 .wrapper .section__content {
   font-size: clamp(0.925rem, 2vw, 2.125rem);
+  max-width: 600px;
+  margin: 0 auto;
 }
 .wrapper .section .entry {
   padding-bottom: 3em;
   font-size: clamp(0.925rem, 2vw, 2.125rem);
 }
-.wrapper .section .entry dt.date {
+.wrapper .section .entry .date {
   text-align: center;
   font-weight: 900;
   margin-bottom: 2em;
   font-size: clamp(1.1rem, 2vw, 2.5rem);
+  text-decoration: underline;
 }
 .wrapper .section .entry .details__title {
   font-weight: 900;
@@ -150,12 +154,29 @@ a::after {
   visibility: hidden;
 }
 
+@media screen and (min-width: 1000px) {
+  .wrapper .section .entry {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    max-width: 1200px;
+  }
+  .wrapper .section .entry .date {
+    width: 30%;
+    text-align: right;
+  }
+  .wrapper .section .entry .details {
+    width: 45%;
+  }
+}
 .contact-form__container {
   margin-bottom: 2em;
 }
 .contact-form__label {
   font-size: clamp(0.925rem, 2vw, 2rem);
   font-weight: 800;
+  width: 100%;
+  max-width: 400px;
 }
 .contact-form__label.required::after {
   font-family: "Font Awesome 5 Free";
@@ -168,6 +189,7 @@ a::after {
   width: 100%;
   border: 1.5px solid;
   border-radius: 10px;
+  max-width: 400px;
 }
 .contact-form__textarea.has-error, .contact-form__text.has-error {
   border-color: rgb(255, 51, 51);
@@ -225,6 +247,21 @@ a::after {
   box-shadow: 0 0 0 100vmax rgba(252, 155, 155, 0.35);
 }
 
+.contact-links__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 450px) {
+  .contact-form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-form__label, .contact-form__text, .contact-form__textarea {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
 .footer__container {
   text-align: center;
   font-size: clamp(0.75rem, 2vw, 1rem);

@@ -56,7 +56,27 @@ I'm usually pretty busy, but I'll try to get back to you as soon as I can.
 `;
 }
 
-function sendMail(req, res, next) {
+function getAdminBodyHtml(req) {
+  return `<p>
+  You recieved a message from kevinbrummer.com.
+</p>
+<p>
+  ----------------------------
+  <br>
+  Name: ${req.body.name}
+  <br>
+  Email: ${req.body.email}
+  <br>
+  Message: 
+  <br>
+  ${req.body.message}
+  <br>
+  ----------------------------
+</p>
+`;
+}
+
+async function sendMail(req, res, next) {
   transporter.sendMail({
     from: `Kevin Brummer <${process.env.EMAIL_ADDRESS}>`,
     to: req.body.email,

@@ -214,7 +214,7 @@ block content
               if errors && errors.email 
                 p.contact-form__error #{ errors.email }
 
-            .contact_form__container
+            .contact-form__container
               label.contact-form__label.required(for="message") Message
               textarea.contact-form__textarea(name="message", cols="30", rows="10", value=message class=errors && errors.message && 'has-error') #{message}
               if errors && errors.message 

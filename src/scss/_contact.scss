@@ -5,6 +5,8 @@
   &__label {
     font-size: clamp(.925rem, 2vw, 2rem);
     font-weight: 800;
+    width: 100%;
+    max-width: 400px;
     &.required::after {
       font-family: "Font Awesome 5 Free";
       content: '\2a';
@@ -18,6 +20,7 @@
     width: 100%;
     border: 1.5px solid;
     border-radius: 10px;
+    max-width: 400px;
     &.has-error {
       border-color: $error;
     }
@@ -77,5 +80,25 @@
     background-color: $error--background;
     color: $error;
     box-shadow: 0 0 0 100vmax $error--background;
+  }
+}
+
+.contact-links__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 450px) {
+  .contact-form {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__label,
+    &__text,
+    &__textarea {
+      width: 50%;
+      margin: 0 auto;
+    }
   }
 }
