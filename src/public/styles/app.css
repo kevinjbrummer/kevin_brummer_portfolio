@@ -213,7 +213,8 @@ a:is(:hover, :focus) {
 }
 .contact-form__error {
   color: rgb(255, 51, 51);
-  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 2vw, 1.1rem);
+  max-width: 400px;
 }
 .contact-form__button-container {
   text-align: center;
@@ -245,6 +246,7 @@ a:is(:hover, :focus) {
   margin-bottom: 1em;
   font-weight: 700;
   clip-path: inset(-1px -100vmax);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
 }
 .message.success {
   background-color: rgba(145, 197, 145, 0.35);
@@ -267,7 +269,7 @@ a:is(:hover, :focus) {
     flex-direction: column;
     justify-content: center;
   }
-  .contact-form__label, .contact-form__text, .contact-form__textarea {
+  .contact-form__label, .contact-form__text, .contact-form__textarea, .contact-form__error {
     width: 50%;
     margin: 0 auto;
   }

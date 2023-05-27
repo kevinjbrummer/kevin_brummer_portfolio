@@ -219,11 +219,6 @@ block content
               textarea.contact-form__textarea(name="message", cols="30", rows="10", value=message class=errors && errors.message && 'has-error') #{message}
               if errors && errors.message 
                 p.contact-form__error #{ errors.message }
-
-            if errors && errors.system_error 
-              div 
-                p.error-message 
-                | System Error
             .contact-form__button-container
               input.contact-form__button#submitBtn(name="submitBtn", type="button", value="Send")
           

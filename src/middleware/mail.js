@@ -23,7 +23,7 @@ const htmlToTextOptions = {
 const transporter = mailer.createTransport(mailOptions);
 transporter.use('compile', htmlToText(htmlToTextOptions));
 
-function getBodyHtml(req) {
+function getUserBodyHtml(req) {
   return `<p>
   Hello ${req.body.name}!
 </p>
@@ -77,22 +77,32 @@ function getAdminBodyHtml(req) {
 }
 
 async function sendMail(req, res, next) {
-  transporter.sendMail({
-    from: `Kevin Brummer <${process.env.EMAIL_ADDRESS}>`,
+  const fromAddress = `Kevin Brummer <${process.env.ADMIN_EMAIL_ADDRESS}>`;
+  const userMail = {
+    from: fromAddress,
     to: req.body.email,
     subject: "Contact Request Sent - kevinbrummer.com",
-    html: getBodyHtml(req)
-  }, function (error, info) {
-    if (error) {
-      console.log(error);
-      return res.render('index', {
-        title: 'Home',
-        recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
-        system_error: true
-      });
-    }
-    next();
-  });
+    html: getUserBodyHtml(req)
+  };
+  const adminMail = {
+    from: fromAddress,
+    to: process.env.ADMIN_EMAIL_ADDRESS,
+    subject: "Contact Request Recieved - kevinbrummer.com",
+    html: getAdminBodyHtml(req)
+  };
+  try {
+    await transporter.sendMail(userMail);
+
+    await transporter.sendMail(adminMail);
+  } catch (error) {
+    console.log(error);
+    return res.render('index', {
+      title: 'Home',
+      recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
+      system_error: true
+    });
+  }
+  next();
 }
 
 module.exports = sendMail;

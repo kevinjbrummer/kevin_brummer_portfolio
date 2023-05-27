@@ -16,9 +16,9 @@ async function tokenVerify(token) {
 async function validateRecaptcha(req, res, next) {
   if (process.env.NODE_ENV !== 'test') {
     const recaptchaResponse = await tokenVerify(req.body['grecaptcha']);
-    if (recaptchaResponse.score < process.env.RECPTCHA_MIN_SCORE) {
+    if (recaptchaResponse.success !== true || recaptchaResponse.score < process.env.RECPTCHA_MIN_SCORE) {
       return res.render('index', {
-        errors: { system_error: 'Recaptcha Token Error' }
+        system_error: 'Recaptcha Token Error' 
       });
     }
   }
