@@ -20,7 +20,8 @@ async function validateRecaptcha(req, res, next) {
       console.log(recaptchaResponse);
       return res.render('index', {
         title: 'Home',
-        system_error: 'Recaptcha Token Error' 
+        system_error: 'Recaptcha Token Error',
+        recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
       });
     }
   }

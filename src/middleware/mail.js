@@ -98,6 +98,7 @@ async function sendMail(req, res, next) {
     console.log(error);
     return res.render('index', {
       title: 'Home',
+      recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
       system_error: true
     });
   }
