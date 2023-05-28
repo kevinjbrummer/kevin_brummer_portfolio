@@ -7,7 +7,6 @@ const validateRecaptcha = require('./middleware/recaptcha');
 const sendMail = require('./middleware/mail');
 
 app.set('view engine', 'pug');
-console.log(process.env.RECAPTCHA_SITE_KEY);
 
 app.get('/', (req, res) => {
   res.render('index', { title: 'Home' });
