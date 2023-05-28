@@ -19,6 +19,7 @@ async function validateRecaptcha(req, res, next) {
     if (recaptchaResponse.success !== true || recaptchaResponse.score < process.env.RECPTCHA_MIN_SCORE) {
       console.log(recaptchaResponse);
       return res.render('index', {
+        title: 'Home',
         system_error: 'Recaptcha Token Error' 
       });
     }

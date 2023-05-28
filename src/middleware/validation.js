@@ -45,7 +45,6 @@ function validateContactForm(req, res, next) {
   if (!result.isEmpty()) {
     return res.render('index', {
       title: 'Home',
-      recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
       name: req.body.name,
       email: req.body.email,
       message: req.body.message,

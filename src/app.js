@@ -10,7 +10,7 @@ app.set('view engine', 'pug');
 console.log(process.env.RECAPTCHA_SITE_KEY);
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Home', recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY });
+  res.render('index', { title: 'Home' });
 });
 
 app.use(express.json());
@@ -26,7 +26,6 @@ app.post(
    res.status(200).render('index', {
       title: 'Home',
       success: true,
-      recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
     });
   }
 );
