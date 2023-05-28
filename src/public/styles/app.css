@@ -114,19 +114,19 @@ a:is(:hover, :focus) {
   margin-right: 1em;
 }
 .wrapper .section__content {
-  font-size: clamp(0.925rem, 2vw, 2.125rem);
+  font-size: clamp(0.925rem, 2vw, 1.5rem);
   max-width: 600px;
   margin: 0 auto;
 }
 .wrapper .section .entry {
   padding-bottom: 3em;
-  font-size: clamp(0.925rem, 2vw, 2.125rem);
+  font-size: clamp(0.925rem, 2vw, 1.5rem);
 }
 .wrapper .section .entry .date {
   text-align: center;
   font-weight: 900;
   margin-bottom: 2em;
-  font-size: clamp(1.1rem, 2vw, 2.5rem);
+  font-size: clamp(1.1rem, 2vw, 1.75rem);
   text-decoration: underline;
 }
 .wrapper .section .entry .details__title {
@@ -183,7 +183,7 @@ a:is(:hover, :focus) {
   margin-bottom: 2em;
 }
 .contact-form__label {
-  font-size: clamp(0.925rem, 2vw, 2rem);
+  font-size: clamp(0.925rem, 2vw, 1.5rem);
   font-weight: 800;
   width: 100%;
   max-width: 400px;
@@ -231,13 +231,13 @@ a:is(:hover, :focus) {
   cursor: pointer;
 }
 .contact-form__button:is(:hover, :focus) {
-  background-color: white;
-  color: black;
+  background-color: #8813f6;
+  border-color: #8813f6;
 }
 
 .contact-links__content {
   font-weight: 600;
-  font-size: clamp(0.925rem, 2vw, 2rem);
+  font-size: clamp(0.925rem, 2vw, 1.5rem);
 }
 
 .message {
@@ -246,7 +246,7 @@ a:is(:hover, :focus) {
   margin-bottom: 1em;
   font-weight: 700;
   clip-path: inset(-1px -100vmax);
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 .message.success {
   background-color: rgba(145, 197, 145, 0.35);

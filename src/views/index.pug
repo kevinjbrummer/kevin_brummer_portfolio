@@ -48,12 +48,15 @@ block content
                 | Designing and implementing databases, APIs, and servers.
                 | Actively communicating with clients to meet all their needs.
                 | Attending conferences and taking certifications to improve my skills.
+                | Mentoring juniors to improve programming abilities and work as a team.
                 | Looking for my next challenge.
               dd.details__technology 
                 ul 
                   li Ruby 
                   li Rails 
                   li PHP 
+                  li Symfony
+                  li EC-CUBE
                   li Docker 
                   li Linux
                   li MySQL
@@ -74,6 +77,7 @@ block content
               dd.details__technology 
                 ul 
                   li Microsoft Office
+                  li Japanese Cultue
       section.section#side-projects
         h2.section__title
           span
@@ -81,7 +85,7 @@ block content
           | Side Projects
         dl
           .entry
-            dt.date March 2023 ~ April 2023
+            dt.date March 2023 ~ May 2023
             .details 
               dd.details__title Portfolio (This Website!)
               dd.details__description 
@@ -100,7 +104,7 @@ block content
                   li NGINX
                   li Design
           .entry
-            dt.date December 2023 ~ April 2023
+            dt.date December 2022 ~ May 2023
             .details 
               dd.details__title
                 a(href="https://eikaiwacoach.com") MAMA 1ST ENGLISH
@@ -190,18 +194,18 @@ block content
             p
               a(href="https://www.linkedin.com/in/kevinbrummer/") https://www.linkedin.com/in/kevinbrummer/
             br
-        .contact-form 
+        .contact-form#contact-top
           if success
-            .message.success 
+            .message.success
               p 
                 | Your message was successfully sent!
           if system_error 
-            .message.error 
+            .message.error
               p 
                 | Your message was unable to be sent.
                 br
                 | Please wait and try again.
-          form#contact-form(action="/#contact-form", method="POST", multipart="urlencoded")
+          form#contact-form(action="/#contact-top", method="POST", multipart="urlencoded")
             .contact-form__container
               label.contact-form__label.required(for="name") Name
               input.contact-form__text#name(type="text", name="name", value=name, placeholder="Sterling Archer" class=errors && errors.name && 'has-error')

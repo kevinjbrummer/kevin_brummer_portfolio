@@ -3,7 +3,7 @@
     margin-bottom: 2em;
   }
   &__label {
-    font-size: clamp(.925rem, 2vw, 2rem);
+    font-size: clamp(.925rem, 2vw, 1.5rem);
     font-weight: 800;
     width: 100%;
     max-width: 400px;
@@ -53,8 +53,8 @@
     transition: background-color .5s ease, color .5s ease;
     cursor: pointer;
     &:is(:hover, :focus) {
-      background-color: $background--inverse;
-      color: $text--inverse;
+      background-color: $highlight;
+      border-color: $highlight;
     }
   }
 }
@@ -62,7 +62,7 @@
 .contact-links {
   &__content {
     font-weight: 600;
-    font-size: clamp(.925rem, 2vw, 2rem);
+    font-size: clamp(.925rem, 2vw, 1.5rem);
   }
 }
 
@@ -72,7 +72,7 @@
   margin-bottom: 1em;
   font-weight: 700;
   clip-path: inset(-1px -100vmax);
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
   &.success {
     background-color: $success;
     color: $success-font;
