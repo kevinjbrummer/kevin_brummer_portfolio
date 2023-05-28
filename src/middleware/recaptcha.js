@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 async function tokenVerify(token) {
   const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'POST',
