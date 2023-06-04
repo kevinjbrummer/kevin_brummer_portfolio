@@ -32,4 +32,12 @@ app.post(
 
 app.use('/assets', express.static(path.join(__dirname, '/public')));
 
+app.use('/robots.txt', function (req, res, next) {
+  res.type('text/plain')
+  res.send(
+    `User-agent: *
+    Disallow: 
+    Sitemap: https://kevinbrummer.com/assets/sitemap.xml`);
+});
+
 module.exports = app;
