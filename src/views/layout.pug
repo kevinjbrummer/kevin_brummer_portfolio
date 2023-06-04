@@ -2,6 +2,8 @@ doctype html
 
 html(lang='en')
   head 
+    block style
+      link(rel='stylesheet', type='text/css', href='/assets/styles/app.css')
     meta(charset='UTF-8')
     meta(name="author", content="Kevin Brummer")
     meta(name="description", content="Portfolio for Kevin Brummer, a professional software engineer. Always looking for a way to grow professionally and personally. Living and working in Osaka, Japan.")
@@ -25,8 +27,6 @@ html(lang='en')
         gtag('js', new Date());
         gtag('config', 'G-HZ6W4L0M3N');
       script(src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js")
-    block style
-      link(rel='stylesheet', type='text/css', href='/assets/styles/app.css')
   body
     block header 
     block content 
