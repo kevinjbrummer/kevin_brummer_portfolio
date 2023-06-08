@@ -284,4 +284,22 @@ a:is(:hover, :focus) {
   flex-direction: column;
 }
 
+.error {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.error__title {
+  font-size: clamp(5rem, 11vw, 10rem);
+  line-height: 1.2;
+}
+.error__home-link {
+  font-size: 3rem;
+}
+.error__system-error {
+  font-size: 3rem;
+}
+
 /*# sourceMappingURL=app.css.map */

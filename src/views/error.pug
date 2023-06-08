@@ -1,1 +1,17 @@
-h1 #{status}
+extends layout.pug
+
+block content
+  .error
+    .error__container 
+      if (status === 404)
+        h1.error__title 
+          | #{status}
+          br
+          | Page Not Found
+        a.error__home-link(href='/') Home
+      else 
+        h1.error__title 
+          | #{status}
+          br 
+          | System Error
+        p.error__system-error Please Contact the System Administrator 
