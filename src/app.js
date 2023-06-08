@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const { contactValidationChain, validateContactForm } = require('./middleware/validation')
 const validateRecaptcha = require('./middleware/recaptcha');
 const sendMail = require('./middleware/mail');
+const { error } = require('console');
 
 app.set('view engine', 'pug');
 
@@ -38,6 +39,15 @@ app.use('/robots.txt', function (req, res, next) {
     `User-agent: *
     Disallow: 
     Sitemap: https://kevinbrummer.com/assets/sitemap.xml`);
+});
+
+app.use((req, res, next) => {
+  res.status(404).render('error', {status: 404});
+});
+
+app.use((error, req, res, next) => {
+  console.log(error);
+  res.status(500).render('error', {status: 500})
 });
 
 module.exports = app;
