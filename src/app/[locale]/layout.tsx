@@ -48,7 +48,7 @@ export default async function RootLayout({
 
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className='bg-gray-100'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />

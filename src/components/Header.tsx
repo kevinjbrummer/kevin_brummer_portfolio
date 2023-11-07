@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link";
 import { useTranslations } from 'next-intl'
+import LocaleSwitcher from "./LocaleSwitcher";
 
 
 export default function Header() {
@@ -11,6 +12,7 @@ export default function Header() {
                 <Link href="/">{t('home')}</Link>
                 <Link href="/about">{t('about')}</Link>
             </nav>
+            <LocaleSwitcher />
         </header>
     )
 }
