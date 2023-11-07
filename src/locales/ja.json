@@ -1,0 +1,12 @@
+{
+  "HomePage": {
+      "helloWorld": "こんにちは！"
+  },
+  "AboutPage": {
+      "aboutText": "This is a fully translated static website"
+  },
+  "Header": {
+      "home": "ホーム",
+      "about": "本サイトについて"
+  }
+}
