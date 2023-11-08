@@ -1,6 +1,6 @@
 import '../globals.css'
+import '../reset.css'
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
 import { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
@@ -49,12 +49,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className='bg-gray-100'>
+      <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          <div className='p-5'>
             {children}
-          </div>
         </NextIntlClientProvider>
       </body>
     </html>

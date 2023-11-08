@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.parallax {
+  display: grid;
+  grid-template-areas: "stack";
+  height: 100vh;
+  contain: paint;
+}
+
+.parallax > * {
+  grid-area: stack;
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+.parallax .parallax__header {
+  z-index: 3;
+  height: fit-content;
+  --parallax-speed: 5;
+  background-color: black;
+}
+.parallax .parallax__header .parallax__header--text {
+  font-size: 3rem;
+  padding: .5em 1em;
+}
+.parallax .parallax__cherry-blossoms {
+z-index: 2;
+--parallax-speed: 4;
+object-fit: cover;
+object-position: 40% 50%;
+}
+
+.parallax .parallax__space {
+z-index: 1;
+--parallax-speed: -2;
+object-fit: cover;
+
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * 100px));
+  }
+}
