@@ -39,7 +39,19 @@ object-position: 40% 50%;
 z-index: 1;
 --parallax-speed: -2;
 object-fit: cover;
+}
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  background-color: black;
+}
+
+.header .header__links {
+  font-size: 1.8rem;
 }
 
 @keyframes parallax {

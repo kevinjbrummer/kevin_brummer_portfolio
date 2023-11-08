@@ -7,10 +7,9 @@ import LocaleSwitcher from "./LocaleSwitcher";
 export default function Header() {
     const t= useTranslations('Header')
     return (
-        <header className="bg-gray-200 shadow">
-            <nav className="container flex px-2 py-2 gap-5 ">
-                <Link href="/">{t('home')}</Link>
-                <Link href="/about">{t('about')}</Link>
+        <header　className="header">
+            <nav className="header__links">
+                <Link href="/">{t('name')} <br /> {t('title')}</Link>
             </nav>
             <LocaleSwitcher />
         </header>

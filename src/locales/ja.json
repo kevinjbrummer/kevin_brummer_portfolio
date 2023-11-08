@@ -2,14 +2,11 @@
   "HomePage": {
       "helloWorld": "こんにちは！"
   },
-  "AboutPage": {
-      "aboutText": "This is a fully translated static website"
-  },
   "Header": {
-      "home": "ホーム",
-      "about": "本サイトについて"
+    "name": "ブラマーケビン",
+    "title": "ソフトウエアエンジニア"
   },
   "LocaleSwitcher": {
-    "locale": "{locale, select, ja {日本語} en {英語} other {inconnu}}"
+    "locale": "{locale, select, ja {日本語} en {英語} other {その他}}"
 }
 }

@@ -18,6 +18,7 @@ export default function LocaleSwitcher() {
 
     return (
         <select
+            className='locale-switcher'
             defaultValue={locale}
             onChange={onLocaleChange}
         >

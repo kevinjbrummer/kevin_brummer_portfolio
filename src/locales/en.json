@@ -2,14 +2,11 @@
   "HomePage": {
       "helloWorld": "Hello World !"
   },
-  "AboutPage": {
-      "aboutText": "This is a fully translated static website"
-  },
   "Header": {
-      "home": "Home",
-      "about": "About"
+      "name": "Kevin Brummer",
+      "title": "Software Engineer"
   },
   "LocaleSwitcher": {
-    "locale": "{locale, select, ja {Japanese} en {English} other {Unknown}}"
+    "locale": "{locale, select, ja {Japanese} en {English} other {Other}}"
 }
 }
