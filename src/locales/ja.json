@@ -1,10 +1,64 @@
 {
   "HomePage": {
-      "helloWorld": "こんにちは！"
   },
   "Header": {
     "name": "ブラマーケビン",
     "title": "ソフトウエアエンジニア"
+  },
+  "Section": {
+    "about": "私について",
+    "work": "職歴",
+    "certification": "資格",
+    "contact": "連絡"
+  },
+  "Date": {
+    "date": "{year}年{month}月",
+    "jan": "1",
+    "feb": "2",
+    "mar": "3",
+    "apr": "4",
+    "may": "5",
+    "jun": "6",
+    "jul": "7",
+    "aug": "8",
+    "sep": "9",
+    "oct": "10",
+    "nov": "11",
+    "dec": "12"
+  },
+  "Certifications": {
+    "awsSolutions": {
+        "name": "AWS 認定ソリューションアーキテクト – アソシエイト",
+        "link": "https://aws.amazon.com/jp/certification/certified-solutions-architect-associate/?nc1=h_ls"
+    },
+    "awsDeveloper": {
+        "name": "AWS 認定デヴェロッパー – アソシエイト",
+        "link": "https://aws.amazon.com/jp/certification/certified-developer-associate/?nc1=h_ls"
+    },
+    "htmlProOne": {
+        "name": " HTML5プロフェッショナル認定試験 レベル1",
+        "link": "https://html5exam.jp/outline/lv1.html"
+    },
+    "python": {
+        "name": "Python 3 エンジニア認定基礎試験",
+        "link": "https://www.pythonic-exam.com/exam/basic"
+    },
+    "rubyGold": {
+        "name": "Ruby Association Certified Ruby Programmer Gold version 3",
+        "link": "https://www.ruby.or.jp/en/certification/examination/"
+    },
+    "awsPractitioner": {
+        "name": "AWS 認定クラウドプラクティショナー",
+        "link": "https://aws.amazon.com/jp/certification/certified-cloud-practitioner/"
+    },
+    "rubySilver": {
+        "name": "Ruby Association Certified Ruby Programmer Silver version 2.1",
+        "link": "https://www.ruby.or.jp/en/certification/examination/"
+    },
+    "jlptTwo": {
+        "name": "日本語能力試験2級",
+        "link": "https://www.jlpt.jp/e/index.html"
+    }
   },
   "LocaleSwitcher": {
     "locale": "{locale, select, ja {日本語} en {英語} other {その他}}"

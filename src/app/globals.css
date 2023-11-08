@@ -54,6 +54,33 @@ object-fit: cover;
   font-size: 1.8rem;
 }
 
+.section {
+  background-color: white;
+  color: black;
+  align-items: center;
+}
+
+.section .section__header {
+
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0;
+}
+
+.list .date-entry {
+}
+
+.list .date-entry .date {
+
+}
+
+.list .date-entry .details {
+}
+
 @keyframes parallax {
   to {
     transform: translateY(calc(var(--parallax-speed) * 100px));

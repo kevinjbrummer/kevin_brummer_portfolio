@@ -6,6 +6,61 @@
       "name": "Kevin Brummer",
       "title": "Software Engineer"
   },
+  "Section": {
+    "about": "About",
+    "work": "Work History",
+    "certification": "Certifications",
+    "contact": "Contact"
+  },
+  "Date": {
+    "date": "{month} {year}",
+    "jan": "January",
+    "feb": "February",
+    "mar": "March",
+    "apr": "April",
+    "may": "May",
+    "jun": "June",
+    "jul": "July",
+    "aug": "August",
+    "sep": "September",
+    "oct": "October",
+    "nov": "November",
+    "dec": "December"
+  },
+  "Certifications": {
+    "awsSolutions": {
+        "name": "AWS Solutions Architect",
+        "link": "https://aws.amazon.com/certification/certified-solutions-architect-associate/?nc1=h_ls"
+    },
+    "awsDeveloper": {
+        "name": "AWS Certified Developer - Associate",
+        "link": "https://aws.amazon.com/certification/certified-developer-associate/?nc1=h_ls"
+    },
+    "htmlProOne": {
+        "name": "HTML5 Professional Certification Level.1 Exam",
+        "link": "https://html5exam.jp/outline/lv1.html"
+    },
+    "python": {
+        "name": "Python 3 Certified Engineer Basic Examination",
+        "link": "https://www.pythonic-exam.com/basic-examination"
+    },
+    "rubyGold": {
+        "name": "Ruby Association Certified Ruby Programmer Gold version 3",
+        "link": "https://www.ruby.or.jp/en/certification/examination/"
+    },
+    "awsPractitioner": {
+        "name": "AWS Certified Cloud Practitioner",
+        "link": "https://aws.amazon.com/certification/certified-cloud-practitioner/?nc1=h_ls"
+    },
+    "rubySilver": {
+        "name": "Ruby Association Certified Ruby Programmer Silver version 2.1",
+        "link": "https://www.ruby.or.jp/en/certification/examination/"
+    },
+    "jlptTwo": {
+        "name": "JLPT N2",
+        "link": "https://www.jlpt.jp/e/index.html"
+    }
+  },
   "LocaleSwitcher": {
     "locale": "{locale, select, ja {Japanese} en {English} other {Other}}"
 }
