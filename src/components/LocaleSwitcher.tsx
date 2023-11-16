@@ -1,6 +1,7 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
+import React from "react";
 
 export default function LocaleSwitcher() {
   const t = useTranslations("LocaleSwitcher");

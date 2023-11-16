@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import React from "react";
 
 export default function Parallax() {
   return (
@@ -11,6 +12,7 @@ export default function Parallax() {
       </div>
       <Image
         className="parallax__cherry-blossoms"
+        priority
         src="/cherry_blossom_tree.png"
         alt="cherry blossom"
         fill={true}

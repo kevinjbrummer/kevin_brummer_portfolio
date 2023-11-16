@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "./LocaleSwitcher";
+import React from "react";
 
 export default function Header() {
   const t = useTranslations("Header");

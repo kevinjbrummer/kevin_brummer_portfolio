@@ -4,6 +4,11 @@ body {
   background-color: black;
   color: white;
   font-family: 'Ubuntu', sans-serif;
+  text-wrap: balance;
+}
+
+p {
+  white-space: pre-wrap;
 }
 
 .parallax {
@@ -11,6 +16,7 @@ body {
   grid-template-areas: "stack";
   height: 100vh;
   contain: paint;
+  position: relative;
 }
 
 .parallax > * {
@@ -25,7 +31,7 @@ body {
   background-color: black;
 }
 .parallax .parallax__header .parallax__header--text {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   padding: .5em 1em;
 }
 .parallax .parallax__cherry-blossoms {
@@ -48,20 +54,42 @@ object-fit: cover;
   position: sticky;
   top: 0;
   background-color: black;
+  align-items: center;
 }
 
 .header .header__links {
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 5vw, 1.8rem);
 }
 
 .section {
   background-color: white;
   color: black;
   align-items: center;
+  padding: 1em .7em;
+  font-size: clamp(1.2rem, 5vw, 1.5rem);
+}
+
+.section .section__content {
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 700px;
 }
 
 .section .section__header {
+  display: flex;
+  align-items: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 auto;
+  margin-bottom: .75em;
+  max-width: 800px;
+}
 
+.section .section__header .section__header--icon {
+  margin-right: .5em;
+}
+
+.section .section__header .section__header--text{
+  font-weight: bold;
 }
 
 .footer {
@@ -79,6 +107,20 @@ object-fit: cover;
 }
 
 .list .date-entry .details {
+}
+
+.locale-switcher {
+}
+
+.contact {
+  font-size: clamp(1.2rem, 5vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact__icon {
+  margin-right: .5em;
 }
 
 @keyframes parallax {

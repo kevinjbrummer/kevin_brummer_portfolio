@@ -1,11 +1,24 @@
 "use client";
+import Contact from "@/components/Contact";
 import DateListEntry from "@/components/DateListEntry";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import List from "@/components/List";
 import Parallax from "@/components/Parallax";
 import Section from "@/components/Section";
+import { faLaptop } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard } from "@fortawesome/free-solid-svg-icons/faAddressCard";
+import { faAward } from "@fortawesome/free-solid-svg-icons/faAward";
+import { faFaceSmileBeam } from "@fortawesome/free-solid-svg-icons/faFaceSmileBeam";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons/faGraduationCap";
+import { faSeedling } from "@fortawesome/free-solid-svg-icons/faSeedling";
 import { useTranslations } from "next-intl";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import WorkHistoryEntry from "@/components/WorkHistoryEntry";
+import ProjectEntry from "@/components/ProjectEntry";
+import EducationEntry from "@/components/EducationEntry";
+config.autoAddCss = false;
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -16,9 +29,96 @@ export default function HomePage() {
       <Parallax />
       <Header />
       <main>
-        <Section title="about">About Section</Section>
-        <Section title="work">Work Section</Section>
-        <Section title="certification">
+        <Section title="about" icon={faFaceSmileBeam}>
+          <p>{t("aboutIntro")}</p>
+          <br />
+          <p>{t("aboutEnding")}</p>
+        </Section>
+        <Section title="work" icon={faLaptop}>
+            <WorkHistoryEntry
+              startYear="2022"
+              startMonth="apr"
+              company="ankhSystems"
+              position="ankhPosition"
+              link="https://ankh-systems.co.jp/"
+              details="ankhDetails"
+              skills={[
+                "ruby",
+                "rails",
+                "javascript",
+                "typescript",
+                "node",
+                "next",
+                "react",
+                "php",
+                "docker",
+                "linux",
+                "mysql",
+                "postgres",
+                "aws",
+                "git",
+                "github",
+                "html",
+                "css",
+                "sass"
+              ]}
+            />
+            <WorkHistoryEntry
+              startYear="2018"
+              startMonth="nov"
+              endYear="2022"
+              endMonth="mar"
+              company="aeon"
+              position="aeonPosition"
+              link="https://www.aeonet.co.jp/"
+              details="aeonDetails"
+              skills={[
+                "communication",
+                "japanese",
+                "culture",
+                "businessCulture",
+                "microsoft",
+              ]}
+            />
+        </Section>
+        <Section title="projects" icon={faSeedling}>
+        <ProjectEntry
+              startYear="2023"
+              startMonth="sep"
+              endYear="2023"
+              endMonth="nov"
+              title="portfolio"
+              details="portfolioDetails"
+              skills={[
+                "aws",
+                "typescript",
+                "node",
+                "next",
+                "git",
+                "github",
+                "design"
+              ]}
+            />
+            <ProjectEntry
+              startYear="2022"
+              startMonth="dec"
+              endYear="2023"
+              endMonth="may"
+              title="mama1st"
+              details="mama1stDetails"
+              link="https://www.eikaiwacoach.com"
+              skills={[
+                "php",
+                "mysql",
+                "wordpress",
+                "docker",
+                "html",
+                "css",
+                "sass",
+              ]}
+            />
+        </Section>
+        <Section title="certification" icon={faAward}>
           <List>
             <DateListEntry
               month="oct"
@@ -70,8 +170,21 @@ export default function HomePage() {
             />
           </List>
         </Section>
-        <Section title="contact">
-          Contact
+        <Section title="education" icon={faGraduationCap}>
+          <EducationEntry
+            startYear="2015"
+            startMonth="sep"
+            endYear="2018"
+            endMonth="may"
+            school="umn"
+            degree="umnDegree"
+            details="umnDetails"
+            courses={["algorithms", "ai", "software", "booleanAlgebra"]}
+            link="https://twin-cities.umn.edu/"
+          />
+        </Section>
+        <Section title="contact" icon={faAddressCard}>
+          <Contact />
         </Section>
       </main>
       <Footer />
