@@ -5,6 +5,9 @@ body {
   color: white;
   font-family: "Ubuntu", sans-serif;
   text-wrap: balance;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -135,6 +138,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 1.5em 0;
+  margin-top: auto;
 }
 
 .entry {
@@ -221,6 +225,38 @@ p {
   margin-right: 0.5em;
 }
 
+.error {
+  background-color: black;
+  color: white;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+}
+
+.error div {
+  text-align: center;
+}
+
+.error h1 {
+  font-size: 5rem;
+  margin-bottom: 1em;
+}
+
+.error a {
+  font-size: 2.5em;
+}
+
+.home-link {
+  position: relative;
+  transition: border 4s ease-in;
+}
+
+.home-link:is(:hover, :focus) {
+  animation: link_underline 250ms linear forwards;
+}
+
 @keyframes parallax {
   to {
     transform: translateY(calc(var(--parallax-speed) * 100px));
@@ -253,5 +289,4 @@ p {
     margin: 0 auto;
   }
 
-  
 }
