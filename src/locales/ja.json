@@ -1,0 +1,124 @@
+{
+  "HomePage": {
+    "aboutIntro": "初めまして！大阪でソフトウエアエンジニアとして働いているブラマーケビンです。\n大学でコンピューターサイエンスを勉強していましたが、卒業たら日本語と日本の文化を勉強するために、来日しました。\nソフトウエアやテクノロジーを加えて、日本への熱情も持っています。それで、２０２２年にソフトウエアエンジニアリングと日本語を組み合わせて、日本でコンピューターサイエンスに関わるキャリアを始めるようにしました。\n美しくて素敵な日本に住んだり、働いたりすることで、とてもラッキーです。優れたエンジニアの生活を憧れています。",
+    "aboutEnding": "私に何か機会があれば、あるいは挨拶がしたいだけなら、遠慮なく連絡してください。\nよろしくお願いいたします。"
+  },
+  "Header": {
+    "name": "ブラマーケビン",
+    "title": "ソフトウエアエンジニア"
+  },
+  "Section": {
+    "about": "私について",
+    "work": "職歴",
+    "certification": "資格",
+    "contact": "連絡",
+    "projects": "個人プロジェクト",
+    "education": "学歴"
+  },
+  "Date": {
+    "date": "{year}年{month}月",
+    "jan": "1",
+    "feb": "2",
+    "mar": "3",
+    "apr": "4",
+    "may": "5",
+    "jun": "6",
+    "jul": "7",
+    "aug": "8",
+    "sep": "9",
+    "oct": "10",
+    "nov": "11",
+    "dec": "12"
+  },
+  "Skills": {
+    "ruby": "Ruby",
+    "rails": "Rails",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "node": "Node.js",
+    "next": "Next.js",
+    "react": "React",
+    "php": "PHP",
+    "docker": "Docker",
+    "linux": "Linux",
+    "mysql": "MySQL",
+    "postgres": "PostgreSQL",
+    "aws": "AWS",
+    "git": "Git",
+    "github": "GitHub",
+    "wordpress": "WordPress",
+    "html": "HTML",
+    "css": "CSS",
+    "sass": "SASS",
+    "design": "デザイン",
+    "communication": "コミュニケーション能力",
+    "japanese": "日本語",
+    "culture": "日本文化",
+    "businessCulture": "日本ビジネス文化",
+    "microsoft": "Microsoft Office"
+  },
+  "Work": {
+    "present": "現在",
+    "ankhSystems": "株式会社アンクシステムズ",
+    "ankhPosition": "ソフトウエアデヴェロッパー",
+    "ankhDetails": "優秀なデザイナーや開発者からなる国際的なチームでのフルスタック業務。\nデータベース、API、サーバーの設計と実装。\nクライアントと積極的にコミュニケーションをとり、あらゆるニーズに応える。\n後輩を指導し、プログラミング能力とチームワークを向上させる。\n自分のスキルアップのために、カンファレンスに参加し、資格を取得すること。",
+    "aeon": "株式会社英会話イーオン",
+    "aeonPosition": "英会話講師",
+    "aeonDetails": "生徒との会話を通して、日本とその文化について学んだ。\n生徒が上達するための方法を話し合い、計画した。\n時間の授業をコントロールするための計画や教材を作成。\n日本人と英語を話す少人数のチームと協力。"
+  },
+  "Projects": {
+    "mama1st": "MAMA 1ST ENGLISH",
+    "mama1stDetails": "友人のためにWordpressのテーマとプラグインを作りました。\nデザインは外部のチームにお願いしましたが、それ以外はすべて自分でやりました。\nこのプロジェクトのおかげで、CSSとWordPressをより深く理解することができるようになりました。\n初めての大規模なプロジェクトでしたが、とても楽しかったです。",
+    "portfolio": "ブラマーケビンポートフォリオ",
+    "portfolioDetails": "デザインから実装まで、このプロジェクトは完全に自分ひとりで行いました。\n入社1年目のスキルを活かして、自分のサイトを作るいい機会になりました。\nAWS上にデプロイしました。\n今後もチャレンジングなプロジェクトに挑戦していきたいです！"
+  },
+  "Education": {
+    "umn": "ミネソタ大学",
+    "umnDegree": "教養学部　個別学修",
+    "umnDetails": "コンプライアンス、日本語、コミュニケーションの専門"
+  },
+  "Classes": {
+    "algorithms": "データ構造とアルゴリズム",
+    "ai": "人工知能",
+    "software": "ソフトウエアエンジニアリング",
+    "booleanAlgebra": "ブール代数学"
+  },
+  "Certifications": {
+    "awsSolutions": {
+      "name": "AWS 認定ソリューションアーキテクト – アソシエイト",
+      "link": "https://aws.amazon.com/jp/certification/certified-solutions-architect-associate/?nc1=h_ls"
+    },
+    "awsDeveloper": {
+      "name": "AWS 認定デヴェロッパー – アソシエイト",
+      "link": "https://aws.amazon.com/jp/certification/certified-developer-associate/?nc1=h_ls"
+    },
+    "htmlProOne": {
+      "name": " HTML5プロフェッショナル認定試験 レベル1",
+      "link": "https://html5exam.jp/outline/lv1.html"
+    },
+    "python": {
+      "name": "Python 3 エンジニア認定基礎試験",
+      "link": "https://www.pythonic-exam.com/exam/basic"
+    },
+    "rubyGold": {
+      "name": "Ruby Association Certified Ruby Programmer Gold version 3",
+      "link": "https://www.ruby.or.jp/en/certification/examination/"
+    },
+    "awsPractitioner": {
+      "name": "AWS 認定クラウドプラクティショナー",
+      "link": "https://aws.amazon.com/jp/certification/certified-cloud-practitioner/"
+    },
+    "rubySilver": {
+      "name": "Ruby Association Certified Ruby Programmer Silver version 2.1",
+      "link": "https://www.ruby.or.jp/en/certification/examination/"
+    },
+    "jlptTwo": {
+      "name": "日本語能力試験2級",
+      "link": "https://www.jlpt.jp/e/index.html"
+    }
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, ja {日本語} en {英語} other {その他}}",
+    "language": "言語"
+  }
+}

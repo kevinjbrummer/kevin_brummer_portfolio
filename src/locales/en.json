@@ -1,0 +1,124 @@
+{
+  "HomePage": {
+    "aboutIntro": "Hi there! My name is Kevin Brummer, and I'm a software Engineer based in Osaka, Japan.\n\nI studied computer science in College, and I took some time off to come to Japane to learn about the language and culture.\n\nNot only do I have a passion for all things software and technology, I also hold a special place in my heart for Japan.\n\nSo, in 2022, I decided to combine my passions and become a software engineer in Japan.\n\nI am so lucky to be able to live and work in this beautiful country and I am currently working hard to become an excellent engineer.",
+    "aboutEnding": "If you have any opportunities for me, or just would like to say hello, don't hesitate to contact me."
+  },
+  "Header": {
+    "name": "Kevin Brummer",
+    "title": "Software Engineer"
+  },
+  "Section": {
+    "about": "About",
+    "work": "Work History",
+    "certification": "Certifications",
+    "contact": "Contact",
+    "projects": "Personal Projects",
+    "education": "Education"
+  },
+  "Date": {
+    "date": "{month} {year}",
+    "jan": "January",
+    "feb": "February",
+    "mar": "March",
+    "apr": "April",
+    "may": "May",
+    "jun": "June",
+    "jul": "July",
+    "aug": "August",
+    "sep": "September",
+    "oct": "October",
+    "nov": "November",
+    "dec": "December"
+  },
+  "Skills": {
+    "ruby": "Ruby",
+    "rails": "Rails",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "node": "Node.js",
+    "next": "Next.js",
+    "react": "React",
+    "php": "PHP",
+    "docker": "Docker",
+    "linux": "Linux",
+    "mysql": "MySQL",
+    "postgres": "PostgreSQL",
+    "aws": "AWS",
+    "git": "Git",
+    "github": "GitHub",
+    "wordpress": "WordPress",
+    "html": "HTML",
+    "css": "CSS",
+    "sass": "SASS",
+    "design": "Design",
+    "communication": "Communication Ability",
+    "japanese": "Japanese",
+    "culture": "Japanse Culture",
+    "businessCulture": "Japanese Business Culture",
+    "microsoft": "Microsoft Office"
+  },
+  "Work": {
+    "present": "Present",
+    "ankhSystems": "ANKH Systems",
+    "ankhPosition": "Software Developer",
+    "ankhDetails": "Full Stack work with an international team of talented designers and developers.\nDesigning and implementing databases, APIs, and servers.\nActively communicating with clients to meet all their needs.\nMentoring juniors to improve their programming capabilities and teamwork.\nAttending conferences and gaining certifications to improve my skills.",
+    "aeon": "Eikaiwa AEON",
+    "aeonPosition": "English Instructor",
+    "aeonDetails": "Leaned about Japan and it's culture through conversations with students.\nDiscussed and planned ways for students to improve.\nCreated plans and materials to control hour long classes.\nWorked with a small team of Japanese and English speakers."
+  },
+  "Projects": {
+    "mama1st": "MAMA 1ST ENGLISH",
+    "mama1stDetails": "Created a Wordpress theme and plugin for a friend of mine. \nThe design was done by an outside team, but everything else was done by me.\nThis project helped me gain a deeper understanding of CSS and WordPress.\nIt was my first large-scale project on my own and I had such a blast doing it.",
+    "portfolio": "Kevin Brummer Portfolio",
+    "portfolioDetails": "From the design to the implementation, this project was done completely on my own.\nIt was a good chance to take skills from my first year on the job and use them to create my own website.\nDeployed on AWS.\nI'm looking forward to more challenging projects in my future!"
+  },
+  "Education": {
+    "umn": "University of Minnesota",
+    "umnDegree": "Bachelor of Individualized Studies",
+    "umnDetails": "Specialization in Computer Science, Communication Studies, and Japanese"
+  },
+  "Classes": {
+    "algorithms": "Algorithms & Data Structures",
+    "ai": "Artificial Intelligence",
+    "software": "Software Engineering",
+    "booleanAlgebra": "Boolean Algebra"
+  },
+  "Certifications": {
+    "awsSolutions": {
+      "name": "AWS Solutions Architect",
+      "link": "https://aws.amazon.com/certification/certified-solutions-architect-associate/?nc1=h_ls"
+    },
+    "awsDeveloper": {
+      "name": "AWS Certified Developer - Associate",
+      "link": "https://aws.amazon.com/certification/certified-developer-associate/?nc1=h_ls"
+    },
+    "htmlProOne": {
+      "name": "HTML5 Professional Certification Level.1 Exam",
+      "link": "https://html5exam.jp/outline/lv1.html"
+    },
+    "python": {
+      "name": "Python 3 Certified Engineer Basic Examination",
+      "link": "https://www.pythonic-exam.com/basic-examination"
+    },
+    "rubyGold": {
+      "name": "Ruby Association Certified Ruby Programmer Gold version 3",
+      "link": "https://www.ruby.or.jp/en/certification/examination/"
+    },
+    "awsPractitioner": {
+      "name": "AWS Certified Cloud Practitioner",
+      "link": "https://aws.amazon.com/certification/certified-cloud-practitioner/?nc1=h_ls"
+    },
+    "rubySilver": {
+      "name": "Ruby Association Certified Ruby Programmer Silver version 2.1",
+      "link": "https://www.ruby.or.jp/en/certification/examination/"
+    },
+    "jlptTwo": {
+      "name": "JLPT N2",
+      "link": "https://www.jlpt.jp/e/index.html"
+    }
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, ja {Japanese} en {English} other {Other}}",
+    "language": "Language"
+  }
+}
