@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import React from 'react'
+import React from "react";
 
 type Props = {
   year: string;
@@ -10,14 +10,25 @@ type Props = {
   link: string;
 };
 
-export default function DateListEntry({year, month, content, link}: Props) {
-  const date = useTranslations('Date');
+export default function DateListEntry({
+  year,
+  month,
+  content,
+  link,
+}: Readonly<Props>) {
+  const date = useTranslations("Date");
   return (
-    <div className="date-entry">
-      <dt className="date">{date('date', {year: year, month: date(month)})}</dt>
-      <div className="details">
-        <Link href={link} target="_blank">{content}</Link>
+    <dl className="entry">
+      <dt className="entry__date">
+        {date("date", { year: year, month: date(month) })}
+      </dt>
+      <div className="entry__contents">
+        <dd>
+          <Link className="outside-link" href={link} target="_blank">
+            {content}
+          </Link>
+        </dd>
       </div>
-    </div>
-  )
+    </dl>
+  );
 }

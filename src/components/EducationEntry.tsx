@@ -24,36 +24,38 @@ export default function EducationEntry({
   details,
   courses,
   link,
-}: Props) {
+}: Readonly<Props>) {
   const date = useTranslations("Date");
   const t = useTranslations("Education");
   const c = useTranslations("Classes");
   return (
-    <dl>
-      <dt>
+    <dl className="entry">
+      <dt className="entry__date">
         {date("date", { year: startYear, month: date(startMonth) })} ～{" "}
         {endYear && endMonth
           ? date("date", { year: endYear, month: date(endMonth) })
           : t("present")}
       </dt>
-      <dd>
-        {link ? (
-          <Link href={link} target="_blank">
-            {t(school)}
-          </Link>
-        ) : (
-          t(school)
-        )}
-      </dd>
-      <dd>{t(degree)}</dd>
-      <dd>{t(details)}</dd>
-      <dd>
-        <ul>
-        {courses.map((course) => {
-            return <li key={course}>{c(course)}</li>;
-          })}
-        </ul>
-      </dd>
+      <div className="entry__contents">
+        <dd className="entry__contents--title">
+          {link ? (
+            <Link className="outside-link" href={link} target="_blank">
+              {t(school)}
+            </Link>
+          ) : (
+            t(school)
+          )}
+        </dd>
+        <dd className="entry__contents--subtitle">{t(degree)}</dd>
+        <dd className="entry__contents--details">{t(details)}</dd>
+        <dd>
+          <ul className="entry__contents--list">
+            {courses.map((course) => {
+              return <li key={course}>{c(course)}</li>;
+            })}
+          </ul>
+        </dd>
+      </div>
     </dl>
   );
 }

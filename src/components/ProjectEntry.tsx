@@ -22,35 +22,37 @@ export default function ProjectEntry({
   details,
   skills,
   link,
-}: Props) {
+}: Readonly<Props>) {
   const date = useTranslations("Date");
   const t = useTranslations("Projects");
   const s = useTranslations("Skills");
   return (
-    <dl>
-      <dt>
+    <dl className="entry">
+      <dt className="entry__date">
         {date("date", { year: startYear, month: date(startMonth) })} ～{" "}
         {endYear && endMonth
           ? date("date", { year: endYear, month: date(endMonth) })
           : t("present")}
       </dt>
-      <dd>
-        {link ? (
-          <Link href={link} target="_blank">
-            {t(title)}
-          </Link>
-        ) : (
-          t(title)
-        )}
-      </dd>
-      <dd>{t(details)}</dd>
-      <dd>
-        <ul>
-          {skills.map((skill) => {
-            return <li key={skill}>{s(skill)}</li>;
-          })}
-        </ul>
-      </dd>
+      <div className="entry__contents">
+        <dd className="entry__contents--title">
+          {link ? (
+            <Link className="outside-link" href={link} target="_blank">
+              {t(title)}
+            </Link>
+          ) : (
+            t(title)
+          )}
+        </dd>
+        <dd className="entry__contents--details">{t(details)}</dd>
+        <dd>
+          <ul className="entry__contents--list">
+            {skills.map((skill) => {
+              return <li key={skill}>{s(skill)}</li>;
+            })}
+          </ul>
+        </dd>
+      </div>
     </dl>
   );
 }

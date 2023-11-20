@@ -1,16 +1,15 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import React from "react";
 
 type Props = {
   children: ReactNode;
   title: string;
   icon: IconDefinition;
 };
-export default function Section({ children, title, icon }: Props) {
+export default function Section({ children, title, icon }: Readonly<Props>) {
   const t = useTranslations("Section");
   return (
     <section className="section">

@@ -9,7 +9,6 @@ import Section from "@/components/Section";
 import { faLaptop } from "@fortawesome/free-solid-svg-icons";
 import { faAddressCard } from "@fortawesome/free-solid-svg-icons/faAddressCard";
 import { faAward } from "@fortawesome/free-solid-svg-icons/faAward";
-import { faFaceSmileBeam } from "@fortawesome/free-solid-svg-icons/faFaceSmileBeam";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons/faGraduationCap";
 import { faSeedling } from "@fortawesome/free-solid-svg-icons/faSeedling";
 import { useTranslations } from "next-intl";
@@ -18,6 +17,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import WorkHistoryEntry from "@/components/WorkHistoryEntry";
 import ProjectEntry from "@/components/ProjectEntry";
 import EducationEntry from "@/components/EducationEntry";
+import { faUserTie } from "@fortawesome/free-solid-svg-icons/faUserTie";
 config.autoAddCss = false;
 
 export default function HomePage() {
@@ -29,94 +29,94 @@ export default function HomePage() {
       <Parallax />
       <Header />
       <main>
-        <Section title="about" icon={faFaceSmileBeam}>
-          <p>{t("aboutIntro")}</p>
+        <Section title="about" icon={faUserTie}>
+          <p className="text">{t("aboutIntro")}</p>
           <br />
-          <p>{t("aboutEnding")}</p>
+          <p className="text">{t("aboutEnding")}</p>
         </Section>
         <Section title="work" icon={faLaptop}>
-            <WorkHistoryEntry
-              startYear="2022"
-              startMonth="apr"
-              company="ankhSystems"
-              position="ankhPosition"
-              link="https://ankh-systems.co.jp/"
-              details="ankhDetails"
-              skills={[
-                "ruby",
-                "rails",
-                "javascript",
-                "typescript",
-                "node",
-                "next",
-                "react",
-                "php",
-                "docker",
-                "linux",
-                "mysql",
-                "postgres",
-                "aws",
-                "git",
-                "github",
-                "html",
-                "css",
-                "sass"
-              ]}
-            />
-            <WorkHistoryEntry
-              startYear="2018"
-              startMonth="nov"
-              endYear="2022"
-              endMonth="mar"
-              company="aeon"
-              position="aeonPosition"
-              link="https://www.aeonet.co.jp/"
-              details="aeonDetails"
-              skills={[
-                "communication",
-                "japanese",
-                "culture",
-                "businessCulture",
-                "microsoft",
-              ]}
-            />
+          <WorkHistoryEntry
+            startYear="2022"
+            startMonth="apr"
+            company="ankhSystems"
+            position="ankhPosition"
+            link="https://ankh-systems.co.jp/"
+            details="ankhDetails"
+            skills={[
+              "ruby",
+              "rails",
+              "javascript",
+              "typescript",
+              "node",
+              "next",
+              "react",
+              "php",
+              "docker",
+              "linux",
+              "mysql",
+              "postgres",
+              "aws",
+              "git",
+              "github",
+              "html",
+              "css",
+              "sass",
+            ]}
+          />
+          <WorkHistoryEntry
+            startYear="2018"
+            startMonth="nov"
+            endYear="2022"
+            endMonth="mar"
+            company="aeon"
+            position="aeonPosition"
+            link="https://www.aeonet.co.jp/"
+            details="aeonDetails"
+            skills={[
+              "communication",
+              "japanese",
+              "culture",
+              "businessCulture",
+              "microsoft",
+            ]}
+          />
         </Section>
         <Section title="projects" icon={faSeedling}>
-        <ProjectEntry
-              startYear="2023"
-              startMonth="sep"
-              endYear="2023"
-              endMonth="nov"
-              title="portfolio"
-              details="portfolioDetails"
-              skills={[
-                "aws",
-                "typescript",
-                "node",
-                "next",
-                "git",
-                "github",
-                "design"
-              ]}
-            />
-            <ProjectEntry
-              startYear="2022"
-              startMonth="dec"
-              endYear="2023"
-              endMonth="may"
-              title="mama1st"
-              details="mama1stDetails"
-              link="https://www.eikaiwacoach.com"
-              skills={[
-                "php",
-                "mysql",
-                "wordpress",
-                "docker",
-                "html",
-                "css",
-                "sass",
-              ]}
-            />
+          <ProjectEntry
+            startYear="2023"
+            startMonth="sep"
+            endYear="2023"
+            endMonth="nov"
+            title="portfolio"
+            details="portfolioDetails"
+            skills={[
+              "aws",
+              "typescript",
+              "node",
+              "next",
+              "git",
+              "github",
+              "design",
+            ]}
+          />
+          <ProjectEntry
+            startYear="2022"
+            startMonth="dec"
+            endYear="2023"
+            endMonth="may"
+            title="mama1st"
+            details="mama1stDetails"
+            link="https://www.eikaiwacoach.com"
+            skills={[
+              "php",
+              "mysql",
+              "wordpress",
+              "docker",
+              "html",
+              "css",
+              "sass",
+            ]}
+          />
         </Section>
         <Section title="certification" icon={faAward}>
           <List>

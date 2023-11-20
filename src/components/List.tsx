@@ -1,14 +1,10 @@
 "use client";
-import React from 'react'
-
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
 };
 
-export default function List({children}: Props) {
-  return (
-    <div className='list'>{children}</div>
-  )
+export default function List({ children }: Readonly<Props>) {
+  return <div className="list">{children}</div>;
 }

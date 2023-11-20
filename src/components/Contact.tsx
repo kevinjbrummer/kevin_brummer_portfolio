@@ -12,11 +12,14 @@ config.autoAddCss = false;
 export default function Contact() {
   return (
     <address className="contact">
-      <a className="contact__link" href="mailto:kevinjbrummer@gmail.com">
+      <a
+        className="contact__link outside-link"
+        href="mailto:kevinjbrummer@gmail.com"
+      >
         <FontAwesomeIcon className="contact__icon" icon={faEnvelope} />
         kevinjbrummer@gmail.com
       </a>
-      <a className="contact__link" href="tel:+8107040725974">
+      <a className="contact__link outside-link" href="tel:+8107040725974">
         <FontAwesomeIcon
           className="contact__icon"
           icon={faMobileScreenButton}
@@ -24,7 +27,7 @@ export default function Contact() {
         +81 070-4072-5974
       </a>
       <a
-        className="contact__link"
+        className="contact__link outside-link"
         href="https://github.com/kevinjbrummer"
         target="_blank"
       >
@@ -32,7 +35,7 @@ export default function Contact() {
         github.com/kevinjbrummer
       </a>
       <a
-        className="contact__link"
+        className="contact__link outside-link"
         href="https://www.linkedin.com/in/kevinbrummer/"
         target="_blank"
       >

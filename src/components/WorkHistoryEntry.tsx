@@ -24,32 +24,34 @@ export default function WorkHistoryEntry({
   details,
   skills,
   link,
-}: Props) {
+}: Readonly<Props>) {
   const date = useTranslations("Date");
   const t = useTranslations("Work");
   const s = useTranslations("Skills");
   return (
-    <dl>
-      <dt>
+    <dl className="entry">
+      <dt className="entry__date">
         {date("date", { year: startYear, month: date(startMonth) })} ～{" "}
         {endYear && endMonth
           ? date("date", { year: endYear, month: date(endMonth) })
           : t("present")}
       </dt>
-      <dd>
-        <Link href={link} target="_blank">
-          {t(company)}
-        </Link>
-      </dd>
-      <dd>{t(position)}</dd>
-      <dd>{t(details)}</dd>
-      <dd>
-        <ul>
-          {skills.map((skill) => {
-            return <li key={skill}>{s(skill)}</li>;
-          })}
-        </ul>
-      </dd>
+      <div className="entry__contents">
+        <dd className="entry__contents--title">
+          <Link className="outside-link" href={link} target="_blank">
+            {t(company)}
+          </Link>
+        </dd>
+        <dd className="entry__contents--subtitle">{t(position)}</dd>
+        <dd className="entry__contents--details">{t(details)}</dd>
+        <dd>
+          <ul className="entry__contents--list">
+            {skills.map((skill) => {
+              return <li key={skill}>{s(skill)}</li>;
+            })}
+          </ul>
+        </dd>
+      </div>
     </dl>
   );
 }

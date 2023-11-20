@@ -6,7 +6,7 @@ type Props = {
 
 // Since we have a `not-found.tsx` page on the root, a layout file
 // is required, even if it's just passing children through.
-export default function GlobalError({ children }: Props) {
+export default function GlobalError({ children }: Readonly<Props>) {
   return (
     <html lang="en">
       <body>{children}</body>

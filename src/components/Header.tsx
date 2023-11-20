@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="header__links">
-        <Link href="/">
+        <Link tabIndex={0} href="/">
           {t("name")} <br /> {t("title")}
         </Link>
       </nav>
