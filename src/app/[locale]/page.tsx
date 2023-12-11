@@ -18,6 +18,7 @@ import WorkHistoryEntry from "@/components/WorkHistoryEntry";
 import ProjectEntry from "@/components/ProjectEntry";
 import EducationEntry from "@/components/EducationEntry";
 import { faUserTie } from "@fortawesome/free-solid-svg-icons/faUserTie";
+import Head from "next/head";
 config.autoAddCss = false;
 
 export default function HomePage() {
@@ -26,6 +27,9 @@ export default function HomePage() {
 
   return (
     <>
+      <Head>
+        <link rel="preload" href="/path/to/image.ext" as="image" />
+      </Head>
       <Parallax />
       <Header />
       <main>
@@ -120,6 +124,12 @@ export default function HomePage() {
         </Section>
         <Section title="certification" icon={faAward}>
           <List>
+            <DateListEntry
+              month="dec"
+              year="2023"
+              content={certs("awsSysOps.name")}
+              link={certs("awsSysops.link")}
+            />
             <DateListEntry
               month="oct"
               year="2023"

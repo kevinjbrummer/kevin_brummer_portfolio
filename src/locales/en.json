@@ -84,8 +84,12 @@
     "booleanAlgebra": "Boolean Algebra"
   },
   "Certifications": {
+    "awsSysOps": {
+      "name": "AWS Certified SysOps Administrator - Associate",
+      "link": "https://aws.amazon.com/certification/certified-sysops-admin-associate/?nc1=h_ls"
+    },
     "awsSolutions": {
-      "name": "AWS Solutions Architect",
+      "name": "AWS Certified Solutions Architect - Associate",
       "link": "https://aws.amazon.com/certification/certified-solutions-architect-associate/?nc1=h_ls"
     },
     "awsDeveloper": {

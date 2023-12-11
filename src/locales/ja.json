@@ -84,6 +84,10 @@
     "booleanAlgebra": "ブール代数学"
   },
   "Certifications": {
+    "awsSysOps": {
+      "name": "AWS 認定SysOpsアドミニストレータ – アソシエイト",
+      "link": "https://aws.amazon.com/jp/certification/certified-sysops-admin-associate/"
+    },
     "awsSolutions": {
       "name": "AWS 認定ソリューションアーキテクト – アソシエイト",
       "link": "https://aws.amazon.com/jp/certification/certified-solutions-architect-associate/?nc1=h_ls"
