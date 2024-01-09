@@ -84,6 +84,14 @@
     "booleanAlgebra": "Boolean Algebra"
   },
   "Certifications": {
+    "azFundamentals": {
+      "name": "Microsoft Azure Fundamentals",
+      "link": "https://learn.microsoft.com/en-us/credentials/certifications/exams/az-900/"
+    },
+    "javascriptDeveloper": {
+      "name": "Salesforce JavaScript Developer I",
+      "link": "https://trailhead.salesforce.com/en/credentials/javascriptdeveloperi"
+    },
     "awsSysOps": {
       "name": "AWS Certified SysOps Administrator - Associate",
       "link": "https://aws.amazon.com/certification/certified-sysops-admin-associate/?nc1=h_ls"

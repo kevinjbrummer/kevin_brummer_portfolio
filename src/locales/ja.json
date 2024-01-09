@@ -84,6 +84,14 @@
     "booleanAlgebra": "ブール代数学"
   },
   "Certifications": {
+    "azFundamentals": {
+      "name": "Microsoft Azure の基礎",
+      "link": "https://learn.microsoft.com/ja-jp/credentials/certifications/exams/az-900/"
+    },
+    "javascriptDeveloper": {
+      "name": "Salesforce 認定 JavaScript デベロッパー",
+      "link": "https://trailhead.salesforce.com/ja/credentials/javascriptdeveloperi"
+    },
     "awsSysOps": {
       "name": "AWS 認定SysOpsアドミニストレータ – アソシエイト",
       "link": "https://aws.amazon.com/jp/certification/certified-sysops-admin-associate/"
