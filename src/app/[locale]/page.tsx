@@ -124,7 +124,13 @@ export default function HomePage() {
         </Section>
         <Section title="certification" icon={faAward}>
           <List>
-          <DateListEntry
+            <DateListEntry
+              month="jan"
+              year="2024"
+              content={certs("htmlProTwo.name")}
+              link={certs("htmlProTwo.link")}
+            />
+            <DateListEntry
               month="dec"
               year="2023"
               content={certs("azFundamentals.name")}

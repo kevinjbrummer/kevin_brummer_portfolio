@@ -105,8 +105,12 @@
       "link": "https://aws.amazon.com/certification/certified-developer-associate/?nc1=h_ls"
     },
     "htmlProOne": {
-      "name": "HTML5 Professional Certification Level.1 Exam",
+      "name": "HTML5 Professional Certification Level.1",
       "link": "https://html5exam.jp/outline/lv1.html"
+    },
+    "htmlProTwo": {
+      "name": "HTML5 Professional Certification Level.2",
+      "link": "https://html5exam.jp/outline/lv2.html"
     },
     "python": {
       "name": "Python 3 Certified Engineer Basic Examination",

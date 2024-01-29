@@ -108,6 +108,10 @@
       "name": " HTML5プロフェッショナル認定試験 レベル1",
       "link": "https://html5exam.jp/outline/lv1.html"
     },
+    "htmlProTwo": {
+      "name": "HTML5プロフェッショナル認定 レベル2",
+      "link": "https://html5exam.jp/outline/lv2.html"
+    },
     "python": {
       "name": "Python 3 エンジニア認定基礎試験",
       "link": "https://www.pythonic-exam.com/exam/basic"
