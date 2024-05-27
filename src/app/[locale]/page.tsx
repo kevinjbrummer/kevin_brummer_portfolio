@@ -147,7 +147,7 @@ export default function HomePage() {
               month="dec"
               year="2023"
               content={certs("awsSysOps.name")}
-              link={certs("awsSysops.link")}
+              link={certs("awsSysOps.link")}
             />
             <DateListEntry
               month="oct"
