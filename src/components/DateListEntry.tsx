@@ -8,6 +8,7 @@ type Props = {
   month: string;
   content: string;
   link: string;
+  present?: boolean;
 };
 
 export default function DateListEntry({
@@ -15,12 +16,14 @@ export default function DateListEntry({
   month,
   content,
   link,
+  present,
 }: Readonly<Props>) {
   const date = useTranslations("Date");
   return (
     <dl className="entry">
       <dt className="entry__date">
         {date("date", { year: year, month: date(month) })}
+        {present && date("present")}
       </dt>
       <div className="entry__contents">
         <dd>

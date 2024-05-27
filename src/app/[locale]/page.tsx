@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import List from "@/components/List";
 import Parallax from "@/components/Parallax";
 import Section from "@/components/Section";
-import { faLaptop } from "@fortawesome/free-solid-svg-icons";
+import { faLaptop, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 import { faAddressCard } from "@fortawesome/free-solid-svg-icons/faAddressCard";
 import { faAward } from "@fortawesome/free-solid-svg-icons/faAward";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons/faGraduationCap";
@@ -24,6 +24,7 @@ config.autoAddCss = false;
 export default function HomePage() {
   const t = useTranslations("HomePage");
   const certs = useTranslations("Certifications");
+  const volunteer = useTranslations("Volunteer");
 
   return (
     <>
@@ -210,6 +211,17 @@ export default function HomePage() {
             courses={["algorithms", "ai", "software", "booleanAlgebra"]}
             link="https://twin-cities.umn.edu/"
           />
+        </Section>
+        <Section title="volunteer" icon={faPeopleGroup}>
+          <List>
+            <DateListEntry
+              month="apr"
+              year="2024"
+              content={volunteer("coderDojo.name")}
+              link={volunteer("coderDojo.link")}
+              present={true}
+            />
+          </List>
         </Section>
         <Section title="contact" icon={faAddressCard}>
           <Contact />

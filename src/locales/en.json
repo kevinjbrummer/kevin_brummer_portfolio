@@ -13,7 +13,8 @@
     "certification": "Certifications",
     "contact": "Contact",
     "projects": "Personal Projects",
-    "education": "Education"
+    "education": "Education",
+    "volunteer": "Volunteer"
   },
   "Date": {
     "date": "{month} {year}",
@@ -28,7 +29,8 @@
     "sep": "September",
     "oct": "October",
     "nov": "November",
-    "dec": "December"
+    "dec": "December",
+    "present": " ～ Present"
   },
   "Skills": {
     "ruby": "Ruby",
@@ -131,6 +133,12 @@
     "jlptTwo": {
       "name": "JLPT N2",
       "link": "https://www.jlpt.jp/e/index.html"
+    }
+  },
+  "Volunteer": {
+    "coderDojo": {
+      "name": "CoderDojo Mentor",
+      "link": "https://coderdojo.com/en/"
     }
   },
   "LocaleSwitcher": {

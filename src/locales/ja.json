@@ -13,7 +13,8 @@
     "certification": "資格",
     "contact": "連絡",
     "projects": "個人プロジェクト",
-    "education": "学歴"
+    "education": "学歴",
+    "volunteer": "ボランティア"
   },
   "Date": {
     "date": "{year}年{month}月",
@@ -28,7 +29,8 @@
     "sep": "9",
     "oct": "10",
     "nov": "11",
-    "dec": "12"
+    "dec": "12",
+    "present": "～現在"
   },
   "Skills": {
     "ruby": "Ruby",
@@ -131,6 +133,12 @@
     "jlptTwo": {
       "name": "日本語能力試験2級",
       "link": "https://www.jlpt.jp/e/index.html"
+    }
+  },
+  "Volunteer": {
+    "coderDojo": {
+      "name": "CoderDojoメンター",
+      "link": "https://coderdojo.com/ja/"
     }
   },
   "LocaleSwitcher": {
